@@ -137,7 +137,91 @@ input[type="number-right"] {
     border: 1px solid #ccc;
     border-right: 5px solid #ccc;
     font-size: 20px;
-    pointer-events: none;
+    pointer-events: none
+}
+
+input[type="sudoku"] {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    font-size: 20px;
+}
+
+input[type="sudoku-top"] {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-top: 5px solid #ccc;
+    font-size: 20px;
+}
+
+input[type="sudoku-top-left"] {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-top: 5px solid #ccc;
+    border-left: 5px solid #ccc;
+    font-size: 20px;
+}
+
+input[type="sudoku-top-right"] {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-top: 5px solid #ccc;
+    border-right: 5px solid #ccc;
+    font-size: 20px;
+}
+
+input[type="sudoku-bottom"] {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-bottom: 5px solid #ccc;
+    font-size: 20px;
+}
+
+input[type="sudoku-bottom-left"] {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-bottom: 5px solid #ccc;
+    border-left: 5px solid #ccc;
+    font-size: 20px;
+}
+
+input[type="sudoku-bottom-right"] {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-bottom: 5px solid #ccc;
+    border-right: 5px solid #ccc;
+    font-size: 20px;
+}
+
+input[type="sudoku-left"] {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-left: 5px solid #ccc;
+    font-size: 20px;
+}
+
+input[type="sudoku-right"] {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-right: 5px solid #ccc;
+    font-size: 20px;
 }
 
 input[type="text"]:focus {
@@ -178,7 +262,7 @@ button[type="ai"] {
     color: white;
 }
 
-button[type="sodoku"] {
+button[type="sudoku"] {
     width: 200px;
     height: 50px;
     display: inline-block;
@@ -189,6 +273,9 @@ button[type="sodoku"] {
 .header {
     background-color: white;
     text-align: center;
+    width: max-content;
+    height: 50px;
+    border-bottom: 2px;
 }
 
 .solver {
@@ -196,7 +283,7 @@ button[type="sodoku"] {
     color: white;
 }
 
-.sodoku {
+.sudoku {
     text-align: center;
     color: white;
 }

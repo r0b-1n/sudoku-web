@@ -8,5 +8,9 @@
   },
   "author": "",
   "license": "ISC",
-  "type": "module"
+  "dependencies": {
+    "edgegptjs": "^1.0.9",
+    "express": "^4.18.2",
+    "openai": "^3.2.1"
+  }
 }

@@ -1,60 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Kreuzworträtsel online</title>
+  <title>Sudoku online spielen - kostenlos</title>
   <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
 </head>
 
 <body>
   <div class="header">
-      <p>Kreuzworträtsel.de</p>
-      <a href="">Startseite</a>
-  </div>&nbsp
-
-  <img src="kreuzwortraetsel.png"/>
-
-  <div class="creator">
-    <p>Egal ob um zum privaten rätselen oder zur Veröffentlichung, mit unserem Kreuzworträtsel Creator kann jeder seine eigenen Kreuzworträtsel erstellen oder automatisch erstellen lassen.</p>
-    <button type="self" onclick="location.href='/creator/self';">Eigenes Kreuzworträtsel erstellen</button>
-    <button type="ai" onclick="location.href='/creator/ai';">Kreuzworträtsel automatisch erstellen lassen</button>
-  </div>&nbsp
-
-  <div class="crossword">
-    <div class="row">
-      <input type="hint" placeholder="kurzf. Hallo" maxlength="1">
-      <input type="text" maxlength="1">
-      <input type="text" maxlength="1">
-    </div>
-    <div class="row">
-      <input type="hint" placeholder="Haustier" maxlength="1">
-      <input type="text" maxlength="1">
-      <input type="text" maxlength="1">
-      <input type="text" maxlength="1">
-      <input type="text" maxlength="1">
-      <input type="text" maxlength="1">
-    </div>
-    <div class="row">
-      <input type="hint" placeholder="Körperteil" maxlength="1">
-      <input type="text" maxlength="1">
-      <input type="text" maxlength="1">
-      <input type="text" maxlength="1">
-    </div>
-  </div>&nbsp
-
-  <div class="solver">
-    <p>Sie kommen bei ihrem aktuellen Kreuzwörträtsel nicht weiter und benötigen Hilfe? Kein Problem, mit unserem intelligenten Solver erhalten sie immer die richtigen Lösungen.</p>
-    <button type="solver" onclick="location.href='/solver';">Hilfe bei ihrem Kreuzworträtsel erhalten</button>
+      <a href="/">Startseite</a>
   </div>&nbsp
 
   <div class="crossword">
     <div class="row">
       <input type="number-top-left" placeholder="5" maxlength="1">
       <input type="number-top" placeholder="3" maxlength="1">
-      <input type="number-top" maxlength="1">
+      <input type="number-top-right" maxlength="1">
       <input type="number-top" maxlength="1">
       <input type="number-top" placeholder="7" maxlength="1">
-      <input type="number-top" maxlength="1">
+      <input type="number-top-right" maxlength="1">
       <input type="number-top" maxlength="1">
       <input type="number-top" maxlength="1">
       <input type="number-top-right" maxlength="1">
@@ -62,32 +26,32 @@
     <div class="row">
       <input type="number-left" placeholder="6" maxlength="1">
       <input type="number" maxlength="1">
-      <input type="number" maxlength="1">
+      <input type="number-right" maxlength="1">
       <input type="number" placeholder="1" maxlength="1">
       <input type="number" placeholder="9" maxlength="1">
-      <input type="number" placeholder="5" maxlength="1">
+      <input type="number-right" placeholder="5" maxlength="1">
       <input type="number" maxlength="1">
       <input type="number" maxlength="1">
       <input type="number-right" maxlength="1">
     </div>    
     <div class="row">
-      <input type="number-left" maxlength="1">
-      <input type="number" placeholder="9" maxlength="1">
-      <input type="number" placeholder="8" maxlength="1">
-      <input type="number" maxlength="1">
-      <input type="number" maxlength="1">
-      <input type="number" maxlength="1">
-      <input type="number" maxlength="1">
-      <input type="number" placeholder="6" maxlength="1">
-      <input type="number-right" maxlength="1">
+      <input type="number-bottom-left" maxlength="1">
+      <input type="number-bottom" placeholder="9" maxlength="1">
+      <input type="number-bottom-right" placeholder="8" maxlength="1">
+      <input type="number-bottom" maxlength="1">
+      <input type="number-bottom" maxlength="1">
+      <input type="number-bottom-right" maxlength="1">
+      <input type="number-bottom" maxlength="1">
+      <input type="number-bottom" placeholder="6" maxlength="1">
+      <input type="number-bottom-right" maxlength="1">
     </div>    
     <div class="row">
       <input type="number-left" placeholder="8" maxlength="1">
       <input type="number" maxlength="1">
-      <input type="number" maxlength="1">
+      <input type="number-right" maxlength="1">
       <input type="number" maxlength="1">
       <input type="number" placeholder="6" maxlength="1">
-      <input type="number" maxlength="1">
+      <input type="number-right" maxlength="1">
       <input type="number" maxlength="1">
       <input type="number" maxlength="1">
       <input type="number-right" placeholder="3" maxlength="1">
@@ -95,43 +59,43 @@
     <div class="row">
       <input type="number-left" placeholder="4" maxlength="1">
       <input type="number" maxlength="1">
-      <input type="number" maxlength="1">
+      <input type="number-right" maxlength="1">
       <input type="number" placeholder="8" maxlength="1">
       <input type="number" maxlength="1">
-      <input type="number" placeholder="3" maxlength="1">
+      <input type="number-right" placeholder="3" maxlength="1">
       <input type="number" maxlength="1">
       <input type="number" maxlength="1">
       <input type="number-right" placeholder="1" maxlength="1">
     </div>   
     <div class="row">
-      <input type="number-left" placeholder="7" maxlength="1">
-      <input type="number" maxlength="1">
-      <input type="number" maxlength="1">
-      <input type="number" maxlength="1">
-      <input type="number" placeholder="2" maxlength="1">
-      <input type="number" maxlength="1">
-      <input type="number" maxlength="1">
-      <input type="number" maxlength="1">
-      <input type="number-right" placeholder="6" maxlength="1">
+      <input type="number-bottom-left" placeholder="7" maxlength="1">
+      <input type="number-bottom" maxlength="1">
+      <input type="number-bottom-right" maxlength="1">
+      <input type="number-bottom" maxlength="1">
+      <input type="number-bottom" placeholder="2" maxlength="1">
+      <input type="number-bottom-right" maxlength="1">
+      <input type="number-bottom" maxlength="1">
+      <input type="number-bottom" maxlength="1">
+      <input type="number-bottom-right" placeholder="6" maxlength="1">
     </div>    
     <div class="row">
       <input type="number-left" maxlength="1">
       <input type="number" placeholder="6" maxlength="1">
       <input type="number" maxlength="1">
+      <input type="number-left" maxlength="1">
       <input type="number" maxlength="1">
       <input type="number" maxlength="1">
-      <input type="number" maxlength="1">
-      <input type="number" placeholder="2" maxlength="1">
+      <input type="number-left" placeholder="2" maxlength="1">
       <input type="number" placeholder="8" maxlength="1">
       <input type="number-right" maxlength="1">
     </div>    
     <div class="row">
       <input type="number-left" maxlength="1">
       <input type="number" maxlength="1">
-      <input type="number" maxlength="1">
+      <input type="number-right" maxlength="1">
       <input type="number" placeholder="4" maxlength="1">
       <input type="number" placeholder="1" maxlength="1">
-      <input type="number" placeholder="9" maxlength="1">
+      <input type="number-right" placeholder="9" maxlength="1">
       <input type="number" maxlength="1">
       <input type="number" maxlength="1">
       <input type="number-right" placeholder="5" maxlength="1">
@@ -139,19 +103,18 @@
     <div class="row">
       <input type="number-bottom-left" maxlength="1">
       <input type="number-bottom" maxlength="1">
-      <input type="number-bottom" maxlength="1">
+      <input type="number-bottom-right" maxlength="1">
       <input type="number-bottom" maxlength="1">
       <input type="number-bottom" placeholder="8" maxlength="1">
-      <input type="number-bottom" maxlength="1">
+      <input type="number-bottom-right" maxlength="1">
       <input type="number-bottom" maxlength="1">
       <input type="number-bottom" placeholder="7" maxlength="1">
       <input type="number-bottom-right" placeholder="9" maxlength="1">
     </div>
   </div>&nbsp
 
-  <div class="sodoku">
-    <p>Keine Lust mehr auf Kreuzworträtsel und Sie wollen lieber Sodoku spielen? Kein Problem.</p>
-    <button type="sodoku" onclick="location.href='/sodoku';">Sodoku online erstellen und spielen</button>
+  <div class="sudoku">
+    <button type="sudoku" onclick="location.href='/sudoku';">Sodoku online erstellen und spielen</button>
   </div>&nbsp
 </body>
 

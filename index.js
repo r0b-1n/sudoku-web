@@ -18,8 +18,8 @@ app.get('/impressum', (request, response) => {
 	return response.sendFile('impressum.html', { root: '.' });
 });
 
-app.get('/sodoku', (request, response) => {
-	return response.sendFile('sodoku.html', { root: '.' });
+app.get('/sudoku', (request, response) => {
+	return response.sendFile('sudoku.html', { root: '.' });
 });
 
 app.get('/solver', (request, response) => {
