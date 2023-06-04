@@ -1,0 +1,218 @@
+body {
+    display: grid;
+    place-items: center;
+}
+
+a {
+    color: black;
+}
+
+p {
+    color: black;
+}
+
+.crossword {
+    display: inline-block;
+    border-collapse: collapse;
+}
+  
+.row {
+    display: flex;
+}
+
+input[type="hint"] {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    pointer-events: none;
+}
+
+input[type="placeholder"] {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    border: 1px solid #ffffff;
+    font-size: 15px;
+    pointer-events: none;
+}
+
+input[type="text"] {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    border: 1px solid #ccc;
+    font-size: 40px;
+    pointer-events: none;
+}
+
+input[type="number"] {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    font-size: 20px;
+    pointer-events: none;
+}
+
+input[type="number-top"] {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-top: 5px solid #ccc;
+    font-size: 20px;
+    pointer-events: none;
+}
+
+input[type="number-top-left"] {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-top: 5px solid #ccc;
+    border-left: 5px solid #ccc;
+    font-size: 20px;
+    pointer-events: none;
+}
+
+input[type="number-top-right"] {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-top: 5px solid #ccc;
+    border-right: 5px solid #ccc;
+    font-size: 20px;
+    pointer-events: none;
+}
+
+input[type="number-bottom"] {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-bottom: 5px solid #ccc;
+    font-size: 20px;
+    pointer-events: none;
+}
+
+input[type="number-bottom-left"] {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-bottom: 5px solid #ccc;
+    border-left: 5px solid #ccc;
+    font-size: 20px;
+    pointer-events: none;
+}
+
+input[type="number-bottom-right"] {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-bottom: 5px solid #ccc;
+    border-right: 5px solid #ccc;
+    font-size: 20px;
+    pointer-events: none;
+}
+
+input[type="number-left"] {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-left: 5px solid #ccc;
+    font-size: 20px;
+    pointer-events: none;
+}
+
+input[type="number-right"] {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-right: 5px solid #ccc;
+    font-size: 20px;
+    pointer-events: none;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+  
+input[type="text"]::-webkit-inner-spin-button,
+input[type="text"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+  
+input[type="text"]::-moz-inner-spin-button,
+input[type="text"]::-moz-outer-spin-button {
+    -moz-appearance: none;
+    margin: 0;
+}
+
+.creator {
+    text-align: center;
+    width: 80%;
+    color: white;
+}
+
+button[type="self"] {
+    width: 200px;
+    height: 50px;
+    display: inline-block;
+    background-color: #ED3E3E;
+    color: white;
+}
+
+button[type="ai"] {
+    width: 200px;
+    height: 50px;
+    display: inline-block;
+    background-color: #ED3E3E;
+    color: white;
+}
+
+button[type="sodoku"] {
+    width: 200px;
+    height: 50px;
+    display: inline-block;
+    background-color: #ED3E3E;
+    color: white;
+}
+
+.header {
+    background-color: white;
+    text-align: center;
+}
+
+.solver {
+    text-align: center;
+    color: white;
+}
+
+.sodoku {
+    text-align: center;
+    color: white;
+}
+
+button[type="solver"] {
+    width: 200px;
+    height: 50px;
+    display: inline-block;
+    background-color: #ED3E3E;
+    color: white;
+}
+
+
+footer {
+    width: 100%;
+    height: 250px;
+    text-align: center;
+}
+  
