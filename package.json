@@ -1,7 +1,7 @@
 {
   "name": "kreuzwortraetsel",
   "version": "1.0.0",
-  "description": "Ein Kreuzwortraetsel Creator mit GPT",
+  "description": "Ein Kreuzwortraetsel",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,8 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "crypto": "^1.0.1",
     "edgegptjs": "^1.0.9",
     "express": "^4.18.2",
-    "openai": "^3.2.1"
+    "openai": "^3.2.1",
+    "socket.io": "^4.7.1"
   }
 }
