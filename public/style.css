@@ -56,8 +56,8 @@ input[type="text"] {
 }
 
 input[type="number"] {
-    width: 40px;
-    height: 40px;
+    width: 4vw;
+    height: 4vw;
     text-align: center;
     border: 1px solid #ccc;
     font-size: 20px;
@@ -65,8 +65,8 @@ input[type="number"] {
 }
 
 input[type="number-top"] {
-    width: 40px;
-    height: 40px;
+    width: 4vw;
+    height: 4vw;
     text-align: center;
     border: 1px solid #ccc;
     border-top: 5px solid #ccc;
@@ -75,8 +75,8 @@ input[type="number-top"] {
 }
 
 input[type="number-top-left"] {
-    width: 40px;
-    height: 40px;
+    width: 4vw;
+    height: 4vw;
     text-align: center;
     border: 1px solid #ccc;
     border-top: 5px solid #ccc;
@@ -86,8 +86,8 @@ input[type="number-top-left"] {
 }
 
 input[type="number-top-right"] {
-    width: 40px;
-    height: 40px;
+    width: 4vw;
+    height: 4vw;
     text-align: center;
     border: 1px solid #ccc;
     border-top: 5px solid #ccc;
@@ -97,8 +97,8 @@ input[type="number-top-right"] {
 }
 
 input[type="number-bottom"] {
-    width: 40px;
-    height: 40px;
+    width: 4vw;
+    height: 4vw;
     text-align: center;
     border: 1px solid #ccc;
     border-bottom: 5px solid #ccc;
@@ -107,8 +107,8 @@ input[type="number-bottom"] {
 }
 
 input[type="number-bottom-left"] {
-    width: 40px;
-    height: 40px;
+    width: 4vw;
+    height: 4vw;
     text-align: center;
     border: 1px solid #ccc;
     border-bottom: 5px solid #ccc;
@@ -118,8 +118,8 @@ input[type="number-bottom-left"] {
 }
 
 input[type="number-bottom-right"] {
-    width: 40px;
-    height: 40px;
+    width: 4vw;
+    height: 4vw;
     text-align: center;
     border: 1px solid #ccc;
     border-bottom: 5px solid #ccc;
@@ -129,8 +129,8 @@ input[type="number-bottom-right"] {
 }
 
 input[type="number-left"] {
-    width: 40px;
-    height: 40px;
+    width: 4vw;
+    height: 4vw;
     text-align: center;
     border: 1px solid #ccc;
     border-left: 5px solid #ccc;
@@ -139,8 +139,8 @@ input[type="number-left"] {
 }
 
 input[type="number-right"] {
-    width: 40px;
-    height: 40px;
+    width: 4vw;
+    height: 4vw;
     text-align: center;
     border: 1px solid #ccc;
     border-right: 5px solid #ccc;
@@ -162,7 +162,7 @@ input[type="sudoku-top"] {
     text-align: center;
     border: 1px solid #ccc;
     border-top: 5px solid #ccc;
-    font-size: 20px;
+    font-size: 2vw;
 }
 
 input[type="sudoku-top-left"] {
@@ -172,7 +172,7 @@ input[type="sudoku-top-left"] {
     border: 1px solid #ccc;
     border-top: 5px solid #ccc;
     border-left: 5px solid #ccc;
-    font-size: 20px;
+    font-size: 2vw;
 }
 
 input[type="sudoku-top-right"] {
@@ -182,7 +182,7 @@ input[type="sudoku-top-right"] {
     border: 1px solid #ccc;
     border-top: 5px solid #ccc;
     border-right: 5px solid #ccc;
-    font-size: 20px;
+    font-size: 2vw;
 }
 
 input[type="sudoku-bottom"] {
@@ -191,7 +191,7 @@ input[type="sudoku-bottom"] {
     text-align: center;
     border: 1px solid #ccc;
     border-bottom: 5px solid #ccc;
-    font-size: 20px;
+    font-size: 2vw;
 }
 
 input[type="sudoku-bottom-left"] {
@@ -201,7 +201,7 @@ input[type="sudoku-bottom-left"] {
     border: 1px solid #ccc;
     border-bottom: 5px solid #ccc;
     border-left: 5px solid #ccc;
-    font-size: 20px;
+    font-size: 2vw;
 }
 
 input[type="sudoku-bottom-right"] {
@@ -211,7 +211,7 @@ input[type="sudoku-bottom-right"] {
     border: 1px solid #ccc;
     border-bottom: 5px solid #ccc;
     border-right: 5px solid #ccc;
-    font-size: 20px;
+    font-size: 2vw;
 }
 
 input[type="sudoku-left"] {
@@ -220,7 +220,7 @@ input[type="sudoku-left"] {
     text-align: center;
     border: 1px solid #ccc;
     border-left: 5px solid #ccc;
-    font-size: 20px;
+    font-size: 2vw;
 }
 
 input[type="sudoku-right"] {
@@ -229,7 +229,7 @@ input[type="sudoku-right"] {
     text-align: center;
     border: 1px solid #ccc;
     border-right: 5px solid #ccc;
-    font-size: 20px;
+    font-size: 2vw;
 }
 
 input[type="text"]:focus {
