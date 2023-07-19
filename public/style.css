@@ -149,16 +149,16 @@ input[type="number-right"] {
 }
 
 input[type="sudoku"] {
-    width: 40px;
-    height: 40px;
+    width: 90px;
+    height: 90px;
     text-align: center;
     border: 1px solid #ccc;
     font-size: 20px;
 }
 
 input[type="sudoku-top"] {
-    width: 40px;
-    height: 40px;
+    width: 90px;
+    height: 90px;
     text-align: center;
     border: 1px solid #ccc;
     border-top: 5px solid #ccc;
@@ -166,8 +166,8 @@ input[type="sudoku-top"] {
 }
 
 input[type="sudoku-top-left"] {
-    width: 40px;
-    height: 40px;
+    width: 90px;
+    height: 90px;
     text-align: center;
     border: 1px solid #ccc;
     border-top: 5px solid #ccc;
@@ -176,8 +176,8 @@ input[type="sudoku-top-left"] {
 }
 
 input[type="sudoku-top-right"] {
-    width: 40px;
-    height: 40px;
+    width: 90px;
+    height: 90px;
     text-align: center;
     border: 1px solid #ccc;
     border-top: 5px solid #ccc;
@@ -186,8 +186,8 @@ input[type="sudoku-top-right"] {
 }
 
 input[type="sudoku-bottom"] {
-    width: 40px;
-    height: 40px;
+    width: 90px;
+    height: 90px;
     text-align: center;
     border: 1px solid #ccc;
     border-bottom: 5px solid #ccc;
@@ -195,8 +195,8 @@ input[type="sudoku-bottom"] {
 }
 
 input[type="sudoku-bottom-left"] {
-    width: 40px;
-    height: 40px;
+    width: 90px;
+    height: 90px;
     text-align: center;
     border: 1px solid #ccc;
     border-bottom: 5px solid #ccc;
@@ -205,8 +205,8 @@ input[type="sudoku-bottom-left"] {
 }
 
 input[type="sudoku-bottom-right"] {
-    width: 40px;
-    height: 40px;
+    width: 90px;
+    height: 90px;
     text-align: center;
     border: 1px solid #ccc;
     border-bottom: 5px solid #ccc;
@@ -215,8 +215,8 @@ input[type="sudoku-bottom-right"] {
 }
 
 input[type="sudoku-left"] {
-    width: 40px;
-    height: 40px;
+    width: 90px;
+    height: 90px;
     text-align: center;
     border: 1px solid #ccc;
     border-left: 5px solid #ccc;
@@ -224,8 +224,8 @@ input[type="sudoku-left"] {
 }
 
 input[type="sudoku-right"] {
-    width: 40px;
-    height: 40px;
+    width: 90px;
+    height: 90px;
     text-align: center;
     border: 1px solid #ccc;
     border-right: 5px solid #ccc;
@@ -290,10 +290,8 @@ button[type="solver"] {
     color: white;
 }
 
-
 footer {
     width: 100%;
-    height: 10%;
     text-align: center;
     position: absolute;
     bottom: 0;
