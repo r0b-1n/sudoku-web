@@ -8,7 +8,7 @@
 
 <body>
   <div>
-    <p style="display: inline-block;" id="timer">Time: 0:00</p> | <p style="display: inline-block;"  id="mistakes">Fehler: 0/3</p> | <p style="display: inline-block;" >Felder ausgefüllt: 0/81</p>
+    <p style="display: inline-block;" id="timer">Time: 0:00</p> | <p style="display: inline-block;"  id="mistakes">Fehler: 0/3</p> | <p style="display: inline-block;" id="count">Felder ausgefüllt: 0/81</p>
   </div>
 
   <div class="crossword" id="printableArea">
@@ -205,6 +205,9 @@ function generateSudoku() {
 
   resetTimer()  // We start by resetting the timer
 
+  const NewformattedCount = `Felder ausgefüllt: 0/81`;  // The formatted String for the Timer Display
+  document.getElementById('count').innerText = NewformattedCount; // The Timer Element that gets edited every time
+
   for (let i = 0; i <= 80; i++) {
         document.getElementById(i.toString()).placeholder = "";
         document.getElementById(i.toString()).style.pointerEvents = "all"
@@ -220,7 +223,20 @@ function generateSudoku() {
     arr.push(formattedString[i]);
   }
 
-  console.log(arr)
+  function countNonZeroNumbers(arr) {
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+      const num = parseInt(arr[i]);
+      if (!isNaN(num) && num !== 0) {
+        count++;
+      }
+    }
+    return count;
+    count = 0
+  }
+
+  const formattedCount = `Felder ausgefüllt: ${countNonZeroNumbers(arr)}/81`;  // The formatted String for the Timer Display
+  document.getElementById('count').innerText = formattedCount; // The Timer Element that gets edited every time
 
   for (let i = 0; i <= 80; i++) {
       if (formattedString[i] !== "0") {
@@ -342,7 +358,7 @@ function isSubgridValid(grid, startRow, startCol, num) {
 }
 
 function removeCells(grid) {
-  const difficulty = 40; // Adjust the number of cells to remove as per desired difficulty
+  const difficulty = 81-expert; // Adjust the number of cells to remove as per desired difficulty
 
   for (let i = 0; i < difficulty; i++) {
     let row, col;
