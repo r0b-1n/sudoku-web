@@ -7,4 +7,8 @@
 
 Sudoku is the logic-based, combinatorial number-placement puzzle.
 
+## Are you ready?
 
+<img src="https://sudoku.cyclic.app/sudoku.PNG" alt="Sudoku"/>
+
+Can you solve the sudoku?
