@@ -260,8 +260,21 @@ button {
     display: inline-block;
     background-color: #ED3E3E;
     color: white;
-    border-radius: 12px;
-    
+    border-radius: 12px;  
+}
+
+select {
+    width: 200px;
+    height: 50px;
+    display: inline-block;
+    background-color: #ED3E3E;
+    color: white;
+    border-radius: 12px;  
+}
+
+option {
+    background-color: #ffffff;
+    color: black;
 }
 
 .header {

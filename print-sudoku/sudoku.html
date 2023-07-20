@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sudoku online spielen - kostenlos</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.png">
+</head>
+
+<body>
+  <div id="printableArea">
+    <div class="crossword">
+      <div class="row">
+        <input class="input-field" id="0" oninput="checkInput(this, 0)" name="0" type="sudoku-top-left" maxlength="1">
+        <input class="input-field" id="1" oninput="checkInput(this, 1)" type="sudoku-top" maxlength="1">
+        <input class="input-field" id="2" oninput="checkInput(this, 2)" type="sudoku-top" maxlength="1">
+        <input class="input-field" id="3" oninput="checkInput(this, 3)" type="sudoku-top-left" maxlength="1">
+        <input class="input-field" id="4" oninput="checkInput(this, 4)" type="sudoku-top" maxlength="1">
+        <input class="input-field" id="5" oninput="checkInput(this, 5)" type="sudoku-top" maxlength="1">
+        <input class="input-field" id="6" oninput="checkInput(this, 6)" type="sudoku-top-left" maxlength="1">
+        <input class="input-field" id="7" oninput="checkInput(this, 7)" type="sudoku-top" maxlength="1">
+        <input class="input-field" id="8" oninput="checkInput(this, 8)" type="sudoku-top-right" maxlength="1">
+      </div>
+      <div class="row">
+        <input class="input-field" id="9" oninput="checkInput(this, 9)" type="sudoku-left" maxlength="1">
+        <input class="input-field" id="10" oninput="checkInput(this, 10)" type="sudoku" maxlength="1">
+        <input class="input-field" id="11" oninput="checkInput(this, 11)" type="sudoku-right" maxlength="1">
+        <input class="input-field" id="12" oninput="checkInput(this, 12)" type="sudoku" maxlength="1">
+        <input class="input-field" id="13" oninput="checkInput(this, 13)" type="sudoku" maxlength="1">
+        <input class="input-field" id="14" oninput="checkInput(this, 14)" type="sudoku-right" maxlength="1">
+        <input class="input-field" id="15" oninput="checkInput(this, 15)" type="sudoku" maxlength="1">
+        <input class="input-field" id="16" oninput="checkInput(this, 16)" type="sudoku" maxlength="1">
+        <input class="input-field" id="17" oninput="checkInput(this, 17)" type="sudoku-right" maxlength="1">
+      </div>    
+      <div class="row">
+        <input class="input-field" id="18" oninput="checkInput(this, 18)" type="sudoku-bottom-left" maxlength="1">
+        <input class="input-field" id="19" oninput="checkInput(this, 19)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="20" oninput="checkInput(this, 20)" type="sudoku-bottom-right" maxlength="1">
+        <input class="input-field" id="21" oninput="checkInput(this, 21)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="22" oninput="checkInput(this, 22)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="23" oninput="checkInput(this, 23)" type="sudoku-bottom-right" maxlength="1">
+        <input class="input-field" id="24" oninput="checkInput(this, 24)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="25" oninput="checkInput(this, 25)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="26" oninput="checkInput(this, 26)" type="sudoku-bottom-right" maxlength="1">
+      </div>    
+      <div class="row">
+        <input class="input-field" id="27" oninput="checkInput(this, 27)" type="sudoku-left" maxlength="1">
+        <input class="input-field" id="28" oninput="checkInput(this, 28)" type="sudoku" maxlength="1">
+        <input class="input-field" id="29" oninput="checkInput(this, 29)" type="sudoku" maxlength="1">
+        <input class="input-field" id="30" oninput="checkInput(this, 30)" type="sudoku-left" maxlength="1">
+        <input class="input-field" id="31" oninput="checkInput(this, 31)" type="sudoku" maxlength="1">
+        <input class="input-field" id="32" oninput="checkInput(this, 32)" type="sudoku" maxlength="1">
+        <input class="input-field" id="33" oninput="checkInput(this, 33)" type="sudoku-left" maxlength="1">
+        <input class="input-field" id="34" oninput="checkInput(this, 34)" type="sudoku" maxlength="1">
+        <input class="input-field" id="35" oninput="checkInput(this, 35)" type="sudoku-right" maxlength="1">
+      </div>    
+      <div class="row">
+        <input class="input-field" id="36" oninput="checkInput(this, 36)" type="sudoku-left" maxlength="1">
+        <input class="input-field" id="37" oninput="checkInput(this, 37)" type="sudoku" maxlength="1">
+        <input class="input-field" id="38" oninput="checkInput(this, 38)" type="sudoku-right" maxlength="1">
+        <input class="input-field" id="39" oninput="checkInput(this, 39)" type="sudoku" maxlength="1">
+        <input class="input-field" id="40" oninput="checkInput(this, 40)" type="sudoku" maxlength="1">
+        <input class="input-field" id="41" oninput="checkInput(this, 41)" type="sudoku-right" maxlength="1">
+        <input class="input-field" id="42" oninput="checkInput(this, 42)" type="sudoku" maxlength="1">
+        <input class="input-field" id="43" oninput="checkInput(this, 43)" type="sudoku" maxlength="1">
+        <input class="input-field" id="44" oninput="checkInput(this, 44)" type="sudoku-right" maxlength="1">
+      </div>   
+      <div class="row">
+        <input class="input-field" id="45" oninput="checkInput(this, 45)" type="sudoku-bottom-left" maxlength="1">
+        <input class="input-field" id="46" oninput="checkInput(this, 46)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="47" oninput="checkInput(this, 47)" type="sudoku-bottom-right" maxlength="1">
+        <input class="input-field" id="48" oninput="checkInput(this, 48)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="49" oninput="checkInput(this, 49)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="50" oninput="checkInput(this, 50)" type="sudoku-bottom-right" maxlength="1">
+        <input class="input-field" id="51" oninput="checkInput(this, 51)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="52" oninput="checkInput(this, 52)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="53" oninput="checkInput(this, 53)" type="sudoku-bottom-right" maxlength="1">
+      </div>    
+      <div class="row">
+        <input class="input-field" id="54" oninput="checkInput(this, 54)" type="sudoku-left" maxlength="1">
+        <input class="input-field" id="55" oninput="checkInput(this, 55)" type="sudoku" maxlength="1">
+        <input class="input-field" id="56" oninput="checkInput(this, 56)" type="sudoku" maxlength="1">
+        <input class="input-field" id="57" oninput="checkInput(this, 57)" type="sudoku-left" maxlength="1">
+        <input class="input-field" id="58" oninput="checkInput(this, 58)" type="sudoku" maxlength="1">
+        <input class="input-field" id="59" oninput="checkInput(this, 59)" type="sudoku" maxlength="1">
+        <input class="input-field" id="60" oninput="checkInput(this, 60)" type="sudoku-left" maxlength="1">
+        <input class="input-field" id="61" oninput="checkInput(this, 61)" type="sudoku" maxlength="1">
+        <input class="input-field" id="62" oninput="checkInput(this, 62)" type="sudoku-right" maxlength="1">
+      </div>    
+      <div class="row">
+        <input class="input-field" id="63" oninput="checkInput(this, 63)" type="sudoku-left" maxlength="1">
+        <input class="input-field" id="64" oninput="checkInput(this, 64)" type="sudoku" maxlength="1">
+        <input class="input-field" id="65" oninput="checkInput(this, 65)" type="sudoku-right" maxlength="1">
+        <input class="input-field" id="66" oninput="checkInput(this, 66)" type="sudoku" maxlength="1">
+        <input class="input-field" id="67" oninput="checkInput(this, 67)" type="sudoku" maxlength="1">
+        <input class="input-field" id="68" oninput="checkInput(this, 68)" type="sudoku-right" maxlength="1">
+        <input class="input-field" id="69" oninput="checkInput(this, 69)" type="sudoku" maxlength="1">
+        <input class="input-field" id="70" oninput="checkInput(this, 70)" type="sudoku" maxlength="1">
+        <input class="input-field" id="71" oninput="checkInput(this, 71)" type="sudoku-right" maxlength="1">
+      </div>   
+      <div class="row">
+        <input class="input-field" id="72" oninput="checkInput(this, 72)" type="sudoku-bottom-left" maxlength="1">
+        <input class="input-field" id="73" oninput="checkInput(this, 73)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="74" oninput="checkInput(this, 74)" type="sudoku-bottom-right" maxlength="1">
+        <input class="input-field" id="75" oninput="checkInput(this, 75)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="76" oninput="checkInput(this, 76)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="77" oninput="checkInput(this, 77)" type="sudoku-bottom-right" maxlength="1">
+        <input class="input-field" id="78" oninput="checkInput(this, 78)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="79" oninput="checkInput(this, 79)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="80" oninput="checkInput(this, 80)" name="80" type="sudoku-bottom-right" maxlength="1">
+      </div>
+    </div>&nbsp<br>&nbsp<br>&nbsp<br>&nbsp
+
+    <div class="crossword">
+      <div class="row">
+        <input class="input-field" id="0" oninput="checkInput(this, 0)" name="0" type="sudoku-top-left" maxlength="1">
+        <input class="input-field" id="1" oninput="checkInput(this, 1)" type="sudoku-top" maxlength="1">
+        <input class="input-field" id="2" oninput="checkInput(this, 2)" type="sudoku-top" maxlength="1">
+        <input class="input-field" id="3" oninput="checkInput(this, 3)" type="sudoku-top-left" maxlength="1">
+        <input class="input-field" id="4" oninput="checkInput(this, 4)" type="sudoku-top" maxlength="1">
+        <input class="input-field" id="5" oninput="checkInput(this, 5)" type="sudoku-top" maxlength="1">
+        <input class="input-field" id="6" oninput="checkInput(this, 6)" type="sudoku-top-left" maxlength="1">
+        <input class="input-field" id="7" oninput="checkInput(this, 7)" type="sudoku-top" maxlength="1">
+        <input class="input-field" id="8" oninput="checkInput(this, 8)" type="sudoku-top-right" maxlength="1">
+      </div>
+      <div class="row">
+        <input class="input-field" id="9" oninput="checkInput(this, 9)" type="sudoku-left" maxlength="1">
+        <input class="input-field" id="10" oninput="checkInput(this, 10)" type="sudoku" maxlength="1">
+        <input class="input-field" id="11" oninput="checkInput(this, 11)" type="sudoku-right" maxlength="1">
+        <input class="input-field" id="12" oninput="checkInput(this, 12)" type="sudoku" maxlength="1">
+        <input class="input-field" id="13" oninput="checkInput(this, 13)" type="sudoku" maxlength="1">
+        <input class="input-field" id="14" oninput="checkInput(this, 14)" type="sudoku-right" maxlength="1">
+        <input class="input-field" id="15" oninput="checkInput(this, 15)" type="sudoku" maxlength="1">
+        <input class="input-field" id="16" oninput="checkInput(this, 16)" type="sudoku" maxlength="1">
+        <input class="input-field" id="17" oninput="checkInput(this, 17)" type="sudoku-right" maxlength="1">
+      </div>    
+      <div class="row">
+        <input class="input-field" id="18" oninput="checkInput(this, 18)" type="sudoku-bottom-left" maxlength="1">
+        <input class="input-field" id="19" oninput="checkInput(this, 19)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="20" oninput="checkInput(this, 20)" type="sudoku-bottom-right" maxlength="1">
+        <input class="input-field" id="21" oninput="checkInput(this, 21)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="22" oninput="checkInput(this, 22)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="23" oninput="checkInput(this, 23)" type="sudoku-bottom-right" maxlength="1">
+        <input class="input-field" id="24" oninput="checkInput(this, 24)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="25" oninput="checkInput(this, 25)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="26" oninput="checkInput(this, 26)" type="sudoku-bottom-right" maxlength="1">
+      </div>    
+      <div class="row">
+        <input class="input-field" id="27" oninput="checkInput(this, 27)" type="sudoku-left" maxlength="1">
+        <input class="input-field" id="28" oninput="checkInput(this, 28)" type="sudoku" maxlength="1">
+        <input class="input-field" id="29" oninput="checkInput(this, 29)" type="sudoku" maxlength="1">
+        <input class="input-field" id="30" oninput="checkInput(this, 30)" type="sudoku-left" maxlength="1">
+        <input class="input-field" id="31" oninput="checkInput(this, 31)" type="sudoku" maxlength="1">
+        <input class="input-field" id="32" oninput="checkInput(this, 32)" type="sudoku" maxlength="1">
+        <input class="input-field" id="33" oninput="checkInput(this, 33)" type="sudoku-left" maxlength="1">
+        <input class="input-field" id="34" oninput="checkInput(this, 34)" type="sudoku" maxlength="1">
+        <input class="input-field" id="35" oninput="checkInput(this, 35)" type="sudoku-right" maxlength="1">
+      </div>    
+      <div class="row">
+        <input class="input-field" id="36" oninput="checkInput(this, 36)" type="sudoku-left" maxlength="1">
+        <input class="input-field" id="37" oninput="checkInput(this, 37)" type="sudoku" maxlength="1">
+        <input class="input-field" id="38" oninput="checkInput(this, 38)" type="sudoku-right" maxlength="1">
+        <input class="input-field" id="39" oninput="checkInput(this, 39)" type="sudoku" maxlength="1">
+        <input class="input-field" id="40" oninput="checkInput(this, 40)" type="sudoku" maxlength="1">
+        <input class="input-field" id="41" oninput="checkInput(this, 41)" type="sudoku-right" maxlength="1">
+        <input class="input-field" id="42" oninput="checkInput(this, 42)" type="sudoku" maxlength="1">
+        <input class="input-field" id="43" oninput="checkInput(this, 43)" type="sudoku" maxlength="1">
+        <input class="input-field" id="44" oninput="checkInput(this, 44)" type="sudoku-right" maxlength="1">
+      </div>   
+      <div class="row">
+        <input class="input-field" id="45" oninput="checkInput(this, 45)" type="sudoku-bottom-left" maxlength="1">
+        <input class="input-field" id="46" oninput="checkInput(this, 46)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="47" oninput="checkInput(this, 47)" type="sudoku-bottom-right" maxlength="1">
+        <input class="input-field" id="48" oninput="checkInput(this, 48)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="49" oninput="checkInput(this, 49)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="50" oninput="checkInput(this, 50)" type="sudoku-bottom-right" maxlength="1">
+        <input class="input-field" id="51" oninput="checkInput(this, 51)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="52" oninput="checkInput(this, 52)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="53" oninput="checkInput(this, 53)" type="sudoku-bottom-right" maxlength="1">
+      </div>    
+      <div class="row">
+        <input class="input-field" id="54" oninput="checkInput(this, 54)" type="sudoku-left" maxlength="1">
+        <input class="input-field" id="55" oninput="checkInput(this, 55)" type="sudoku" maxlength="1">
+        <input class="input-field" id="56" oninput="checkInput(this, 56)" type="sudoku" maxlength="1">
+        <input class="input-field" id="57" oninput="checkInput(this, 57)" type="sudoku-left" maxlength="1">
+        <input class="input-field" id="58" oninput="checkInput(this, 58)" type="sudoku" maxlength="1">
+        <input class="input-field" id="59" oninput="checkInput(this, 59)" type="sudoku" maxlength="1">
+        <input class="input-field" id="60" oninput="checkInput(this, 60)" type="sudoku-left" maxlength="1">
+        <input class="input-field" id="61" oninput="checkInput(this, 61)" type="sudoku" maxlength="1">
+        <input class="input-field" id="62" oninput="checkInput(this, 62)" type="sudoku-right" maxlength="1">
+      </div>    
+      <div class="row">
+        <input class="input-field" id="63" oninput="checkInput(this, 63)" type="sudoku-left" maxlength="1">
+        <input class="input-field" id="64" oninput="checkInput(this, 64)" type="sudoku" maxlength="1">
+        <input class="input-field" id="65" oninput="checkInput(this, 65)" type="sudoku-right" maxlength="1">
+        <input class="input-field" id="66" oninput="checkInput(this, 66)" type="sudoku" maxlength="1">
+        <input class="input-field" id="67" oninput="checkInput(this, 67)" type="sudoku" maxlength="1">
+        <input class="input-field" id="68" oninput="checkInput(this, 68)" type="sudoku-right" maxlength="1">
+        <input class="input-field" id="69" oninput="checkInput(this, 69)" type="sudoku" maxlength="1">
+        <input class="input-field" id="70" oninput="checkInput(this, 70)" type="sudoku" maxlength="1">
+        <input class="input-field" id="71" oninput="checkInput(this, 71)" type="sudoku-right" maxlength="1">
+      </div>   
+      <div class="row">
+        <input class="input-field" id="72" oninput="checkInput(this, 72)" type="sudoku-bottom-left" maxlength="1">
+        <input class="input-field" id="73" oninput="checkInput(this, 73)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="74" oninput="checkInput(this, 74)" type="sudoku-bottom-right" maxlength="1">
+        <input class="input-field" id="75" oninput="checkInput(this, 75)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="76" oninput="checkInput(this, 76)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="77" oninput="checkInput(this, 77)" type="sudoku-bottom-right" maxlength="1">
+        <input class="input-field" id="78" oninput="checkInput(this, 78)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="79" oninput="checkInput(this, 79)" type="sudoku-bottom" maxlength="1">
+        <input class="input-field" id="80" oninput="checkInput(this, 80)" name="80" type="sudoku-bottom-right" maxlength="1">
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
+
+<script>
+
+//////////////////////////////////////////////////////////////////////////////// Everything to print a sudoku ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+  function printDiv(divName) {  // divName is the div we want to print out
+     var printContents = document.getElementById(divName).innerHTML;  // Obtain the HTML content inside div
+     var originalContents = document.body.innerHTML;  // Stores the current content of the entire document(div) body
+
+     document.body.innerHTML = printContents;
+
+     window.print();  // The print function
+
+     document.body.innerHTML = originalContents;  // Restore the original content back to the document body
+
+     location.href='/';
+  }
+
+  printDiv('printableArea')
+
+</script>

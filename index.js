@@ -28,4 +28,8 @@ app.get('/game', (request, response) => {
 	return response.sendFile('/multiplayer/sudoku.html', { root: '.' });
 });
 
+app.get('/print', (request, response) => {
+	return response.sendFile('/print-sudoku/sudoku.html', { root: '.' });
+});
+
 app.listen(6969);

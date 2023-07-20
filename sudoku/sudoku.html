@@ -116,18 +116,15 @@
   <div>
     <button onclick="generateSudoku()">Neues Sudoku</button>&nbsp
     <button onclick="lösen()">Sudoku lösen</button>&nbsp
-    <button onclick="printDiv('printableArea')">Sudoku drucken</button>&nbsp
+    <button onclick="printDiv('printableArea')">Dieses Sudoku ausdrucken</button>&nbsp
 
-    <form>
-      <p>Please select the difficulty:</p>
-      <input type="radio" id="easy" name="difficulty" value="easy">
-      <label for="easy">Easy</label><br>
-      <input type="radio" id="medium" name="difficulty" value="medium">
-      <label for="medium">Medium</label><br>  
-      <input type="radio" id="hard" name="difficulty" value="hard">
-      <label for="hard">Hard</label><br>
-      <input type="radio" id="expert" name="difficulty" value="expert">
-      <label for="expert">Expert</label><br> 
+    <br><form>
+      <select name="difficulty" id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+        <option value="expert">Expert</option>
+      </select>
     </form><br>
 
   </div>&nbsp
@@ -200,10 +197,25 @@ var expert = getRndInteger(18, 22)
 var puzzle
 var formattedString
 const arr = [];
+var value
+let count
 
 function generateSudoku() {
 
   resetTimer()  // We start by resetting the timer
+
+  var e = document.getElementById("difficulty");
+  value = e.value;
+
+  if(value === "easy") {
+    value = easy
+  } else if(value === "medium") {
+    value = medium
+  } else if(value === "hard") {
+    value = hard
+  } else if (value === "expert") {
+    value = expert
+  }
 
   const NewformattedCount = `Felder ausgefüllt: 0/81`;  // The formatted String for the Timer Display
   document.getElementById('count').innerText = NewformattedCount; // The Timer Element that gets edited every time
@@ -223,20 +235,25 @@ function generateSudoku() {
     arr.push(formattedString[i]);
   }
 
+  count = 0
+
   function countNonZeroNumbers(arr) {
-    let count = 0;
+    count = 0
     for (let i = 0; i < arr.length; i++) {
-      const num = parseInt(arr[i]);
+      num = 0; num =  parseInt(arr[i]);
       if (!isNaN(num) && num !== 0) {
         count++;
       }
     }
     return count;
-    count = 0
   }
 
-  const formattedCount = `Felder ausgefüllt: ${countNonZeroNumbers(arr)}/81`;  // The formatted String for the Timer Display
+  countNonZeroNumbers(arr)
+
+  const formattedCount = `Felder ausgefüllt: ${count}/81`;  // The formatted String for the Timer Display
   document.getElementById('count').innerText = formattedCount; // The Timer Element that gets edited every time
+
+  console.log(count)
 
   for (let i = 0; i <= 80; i++) {
       if (formattedString[i] !== "0") {
@@ -358,7 +375,7 @@ function isSubgridValid(grid, startRow, startCol, num) {
 }
 
 function removeCells(grid) {
-  const difficulty = 81-expert; // Adjust the number of cells to remove as per desired difficulty
+  const difficulty = 81-value; // Adjust the number of cells to remove as per desired difficulty
 
   for (let i = 0; i < difficulty; i++) {
     let row, col;
