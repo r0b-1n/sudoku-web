@@ -1,677 +1,708 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Sudoku online spielen - kostenlos</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="icon" type="image/x-icon" href="favicon.png">
+    <title>Sudoku online spielen - kostenlos</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
 </head>
 
 <body>
-  <div>
-    <p style="display: inline-block;" id="timer">Time: 0:00</p> | <p style="display: inline-block;"  id="mistakes">Fehler: 0/3</p> | <p style="display: inline-block;" id="count">Felder ausgefüllt: 0/81</p>
-  </div>
-
-  <div class="crossword" id="printableArea">
-    <div class="row">
-      <input class="input-field" id="0" oninput="checkInput(this, 0)" name="0" type="sudoku-top-left" maxlength="1">
-      <input class="input-field" id="1" oninput="checkInput(this, 1)" type="sudoku-top" maxlength="1">
-      <input class="input-field" id="2" oninput="checkInput(this, 2)" type="sudoku-top" maxlength="1">
-      <input class="input-field" id="3" oninput="checkInput(this, 3)" type="sudoku-top-left" maxlength="1">
-      <input class="input-field" id="4" oninput="checkInput(this, 4)" type="sudoku-top" maxlength="1">
-      <input class="input-field" id="5" oninput="checkInput(this, 5)" type="sudoku-top" maxlength="1">
-      <input class="input-field" id="6" oninput="checkInput(this, 6)" type="sudoku-top-left" maxlength="1">
-      <input class="input-field" id="7" oninput="checkInput(this, 7)" type="sudoku-top" maxlength="1">
-      <input class="input-field" id="8" oninput="checkInput(this, 8)" type="sudoku-top-right" maxlength="1">
+    <div>
+        <p style="display: inline-block;" id="timer">Time: 0:00</p> |
+        <p style="display: inline-block;" id="mistakes">
+            Fehler: 0/3</p> |
+        <p style="display: inline-block;" id="count">Felder ausgefüllt: 0/81</p>
     </div>
-    <div class="row">
-      <input class="input-field" id="9" oninput="checkInput(this, 9)" type="sudoku-left" maxlength="1">
-      <input class="input-field" id="10" oninput="checkInput(this, 10)" type="sudoku" maxlength="1">
-      <input class="input-field" id="11" oninput="checkInput(this, 11)" type="sudoku-right" maxlength="1">
-      <input class="input-field" id="12" oninput="checkInput(this, 12)" type="sudoku" maxlength="1">
-      <input class="input-field" id="13" oninput="checkInput(this, 13)" type="sudoku" maxlength="1">
-      <input class="input-field" id="14" oninput="checkInput(this, 14)" type="sudoku-right" maxlength="1">
-      <input class="input-field" id="15" oninput="checkInput(this, 15)" type="sudoku" maxlength="1">
-      <input class="input-field" id="16" oninput="checkInput(this, 16)" type="sudoku" maxlength="1">
-      <input class="input-field" id="17" oninput="checkInput(this, 17)" type="sudoku-right" maxlength="1">
-    </div>    
-    <div class="row">
-      <input class="input-field" id="18" oninput="checkInput(this, 18)" type="sudoku-bottom-left" maxlength="1">
-      <input class="input-field" id="19" oninput="checkInput(this, 19)" type="sudoku-bottom" maxlength="1">
-      <input class="input-field" id="20" oninput="checkInput(this, 20)" type="sudoku-bottom-right" maxlength="1">
-      <input class="input-field" id="21" oninput="checkInput(this, 21)" type="sudoku-bottom" maxlength="1">
-      <input class="input-field" id="22" oninput="checkInput(this, 22)" type="sudoku-bottom" maxlength="1">
-      <input class="input-field" id="23" oninput="checkInput(this, 23)" type="sudoku-bottom-right" maxlength="1">
-      <input class="input-field" id="24" oninput="checkInput(this, 24)" type="sudoku-bottom" maxlength="1">
-      <input class="input-field" id="25" oninput="checkInput(this, 25)" type="sudoku-bottom" maxlength="1">
-      <input class="input-field" id="26" oninput="checkInput(this, 26)" type="sudoku-bottom-right" maxlength="1">
-    </div>    
-    <div class="row">
-      <input class="input-field" id="27" oninput="checkInput(this, 27)" type="sudoku-left" maxlength="1">
-      <input class="input-field" id="28" oninput="checkInput(this, 28)" type="sudoku" maxlength="1">
-      <input class="input-field" id="29" oninput="checkInput(this, 29)" type="sudoku" maxlength="1">
-      <input class="input-field" id="30" oninput="checkInput(this, 30)" type="sudoku-left" maxlength="1">
-      <input class="input-field" id="31" oninput="checkInput(this, 31)" type="sudoku" maxlength="1">
-      <input class="input-field" id="32" oninput="checkInput(this, 32)" type="sudoku" maxlength="1">
-      <input class="input-field" id="33" oninput="checkInput(this, 33)" type="sudoku-left" maxlength="1">
-      <input class="input-field" id="34" oninput="checkInput(this, 34)" type="sudoku" maxlength="1">
-      <input class="input-field" id="35" oninput="checkInput(this, 35)" type="sudoku-right" maxlength="1">
-    </div>    
-    <div class="row">
-      <input class="input-field" id="36" oninput="checkInput(this, 36)" type="sudoku-left" maxlength="1">
-      <input class="input-field" id="37" oninput="checkInput(this, 37)" type="sudoku" maxlength="1">
-      <input class="input-field" id="38" oninput="checkInput(this, 38)" type="sudoku-right" maxlength="1">
-      <input class="input-field" id="39" oninput="checkInput(this, 39)" type="sudoku" maxlength="1">
-      <input class="input-field" id="40" oninput="checkInput(this, 40)" type="sudoku" maxlength="1">
-      <input class="input-field" id="41" oninput="checkInput(this, 41)" type="sudoku-right" maxlength="1">
-      <input class="input-field" id="42" oninput="checkInput(this, 42)" type="sudoku" maxlength="1">
-      <input class="input-field" id="43" oninput="checkInput(this, 43)" type="sudoku" maxlength="1">
-      <input class="input-field" id="44" oninput="checkInput(this, 44)" type="sudoku-right" maxlength="1">
-    </div>   
-    <div class="row">
-      <input class="input-field" id="45" oninput="checkInput(this, 45)" type="sudoku-bottom-left" maxlength="1">
-      <input class="input-field" id="46" oninput="checkInput(this, 46)" type="sudoku-bottom" maxlength="1">
-      <input class="input-field" id="47" oninput="checkInput(this, 47)" type="sudoku-bottom-right" maxlength="1">
-      <input class="input-field" id="48" oninput="checkInput(this, 48)" type="sudoku-bottom" maxlength="1">
-      <input class="input-field" id="49" oninput="checkInput(this, 49)" type="sudoku-bottom" maxlength="1">
-      <input class="input-field" id="50" oninput="checkInput(this, 50)" type="sudoku-bottom-right" maxlength="1">
-      <input class="input-field" id="51" oninput="checkInput(this, 51)" type="sudoku-bottom" maxlength="1">
-      <input class="input-field" id="52" oninput="checkInput(this, 52)" type="sudoku-bottom" maxlength="1">
-      <input class="input-field" id="53" oninput="checkInput(this, 53)" type="sudoku-bottom-right" maxlength="1">
-    </div>    
-    <div class="row">
-      <input class="input-field" id="54" oninput="checkInput(this, 54)" type="sudoku-left" maxlength="1">
-      <input class="input-field" id="55" oninput="checkInput(this, 55)" type="sudoku" maxlength="1">
-      <input class="input-field" id="56" oninput="checkInput(this, 56)" type="sudoku" maxlength="1">
-      <input class="input-field" id="57" oninput="checkInput(this, 57)" type="sudoku-left" maxlength="1">
-      <input class="input-field" id="58" oninput="checkInput(this, 58)" type="sudoku" maxlength="1">
-      <input class="input-field" id="59" oninput="checkInput(this, 59)" type="sudoku" maxlength="1">
-      <input class="input-field" id="60" oninput="checkInput(this, 60)" type="sudoku-left" maxlength="1">
-      <input class="input-field" id="61" oninput="checkInput(this, 61)" type="sudoku" maxlength="1">
-      <input class="input-field" id="62" oninput="checkInput(this, 62)" type="sudoku-right" maxlength="1">
-    </div>    
-    <div class="row">
-      <input class="input-field" id="63" oninput="checkInput(this, 63)" type="sudoku-left" maxlength="1">
-      <input class="input-field" id="64" oninput="checkInput(this, 64)" type="sudoku" maxlength="1">
-      <input class="input-field" id="65" oninput="checkInput(this, 65)" type="sudoku-right" maxlength="1">
-      <input class="input-field" id="66" oninput="checkInput(this, 66)" type="sudoku" maxlength="1">
-      <input class="input-field" id="67" oninput="checkInput(this, 67)" type="sudoku" maxlength="1">
-      <input class="input-field" id="68" oninput="checkInput(this, 68)" type="sudoku-right" maxlength="1">
-      <input class="input-field" id="69" oninput="checkInput(this, 69)" type="sudoku" maxlength="1">
-      <input class="input-field" id="70" oninput="checkInput(this, 70)" type="sudoku" maxlength="1">
-      <input class="input-field" id="71" oninput="checkInput(this, 71)" type="sudoku-right" maxlength="1">
-    </div>   
-    <div class="row">
-      <input class="input-field" id="72" oninput="checkInput(this, 72)" type="sudoku-bottom-left" maxlength="1">
-      <input class="input-field" id="73" oninput="checkInput(this, 73)" type="sudoku-bottom" maxlength="1">
-      <input class="input-field" id="74" oninput="checkInput(this, 74)" type="sudoku-bottom-right" maxlength="1">
-      <input class="input-field" id="75" oninput="checkInput(this, 75)" type="sudoku-bottom" maxlength="1">
-      <input class="input-field" id="76" oninput="checkInput(this, 76)" type="sudoku-bottom" maxlength="1">
-      <input class="input-field" id="77" oninput="checkInput(this, 77)" type="sudoku-bottom-right" maxlength="1">
-      <input class="input-field" id="78" oninput="checkInput(this, 78)" type="sudoku-bottom" maxlength="1">
-      <input class="input-field" id="79" oninput="checkInput(this, 79)" type="sudoku-bottom" maxlength="1">
-      <input class="input-field" id="80" oninput="checkInput(this, 80)" name="80" type="sudoku-bottom-right" maxlength="1">
-    </div>
-  </div>&nbsp
 
-  <div>
-    <button onclick="generateSudoku()">Neues Sudoku</button>&nbsp
-    <button onclick="lösen()">Sudoku lösen</button>&nbsp
-    <button onclick="printDiv('printableArea')">Dieses Sudoku ausdrucken</button>&nbsp
+    <div class="crossword" id="printableArea">
+        <div class="row">
+            <input class="input-field" id="0" type="sudoku-top-left" maxlength="1">
+            <input class="input-field" id="1" type="sudoku-top" maxlength="1">
+            <input class="input-field" id="2" type="sudoku-top" maxlength="1">
+            <input class="input-field" id="3" type="sudoku-top-left" maxlength="1">
+            <input class="input-field" id="4" type="sudoku-top" maxlength="1">
+            <input class="input-field" id="5" type="sudoku-top" maxlength="1">
+            <input class="input-field" id="6" type="sudoku-top-left" maxlength="1">
+            <input class="input-field" id="7" type="sudoku-top" maxlength="1">
+            <input class="input-field" id="8" type="sudoku-top-right" maxlength="1">
+        </div>
+        <div class="row">
+            <input class="input-field" id="9" type="sudoku-left" maxlength="1">
+            <input class="input-field" id="10" type="sudoku" maxlength="1">
+            <input class="input-field" id="11" type="sudoku-right" maxlength="1">
+            <input class="input-field" id="12" type="sudoku" maxlength="1">
+            <input class="input-field" id="13" type="sudoku" maxlength="1">
+            <input class="input-field" id="14" type="sudoku-right" maxlength="1">
+            <input class="input-field" id="15" type="sudoku" maxlength="1">
+            <input class="input-field" id="16" type="sudoku" maxlength="1">
+            <input class="input-field" id="17" type="sudoku-right" maxlength="1">
+        </div>
+        <div class="row">
+            <input class="input-field" id="18" type="sudoku-bottom-left" maxlength="1">
+            <input class="input-field" id="19" type="sudoku-bottom" maxlength="1">
+            <input class="input-field" id="20" type="sudoku-bottom-right" maxlength="1">
+            <input class="input-field" id="21" type="sudoku-bottom" maxlength="1">
+            <input class="input-field" id="22" type="sudoku-bottom" maxlength="1">
+            <input class="input-field" id="23" type="sudoku-bottom-right" maxlength="1">
+            <input class="input-field" id="24" type="sudoku-bottom" maxlength="1">
+            <input class="input-field" id="25" type="sudoku-bottom" maxlength="1">
+            <input class="input-field" id="26" type="sudoku-bottom-right" maxlength="1">
+        </div>
+        <div class="row">
+            <input class="input-field" id="27" type="sudoku-left" maxlength="1">
+            <input class="input-field" id="28" type="sudoku" maxlength="1">
+            <input class="input-field" id="29" type="sudoku" maxlength="1">
+            <input class="input-field" id="30" type="sudoku-left" maxlength="1">
+            <input class="input-field" id="31" type="sudoku" maxlength="1">
+            <input class="input-field" id="32" type="sudoku" maxlength="1">
+            <input class="input-field" id="33" type="sudoku-left" maxlength="1">
+            <input class="input-field" id="34" type="sudoku" maxlength="1">
+            <input class="input-field" id="35" type="sudoku-right" maxlength="1">
+        </div>
+        <div class="row">
+            <input class="input-field" id="36" type="sudoku-left" maxlength="1">
+            <input class="input-field" id="37" type="sudoku" maxlength="1">
+            <input class="input-field" id="38" type="sudoku-right" maxlength="1">
+            <input class="input-field" id="39" type="sudoku" maxlength="1">
+            <input class="input-field" id="40" type="sudoku" maxlength="1">
+            <input class="input-field" id="41" type="sudoku-right" maxlength="1">
+            <input class="input-field" id="42" type="sudoku" maxlength="1">
+            <input class="input-field" id="43" type="sudoku" maxlength="1">
+            <input class="input-field" id="44" type="sudoku-right" maxlength="1">
+        </div>
+        <div class="row">
+            <input class="input-field" id="45" type="sudoku-bottom-left" maxlength="1">
+            <input class="input-field" id="46" type="sudoku-bottom" maxlength="1">
+            <input class="input-field" id="47" type="sudoku-bottom-right" maxlength="1">
+            <input class="input-field" id="48" type="sudoku-bottom" maxlength="1">
+            <input class="input-field" id="49" type="sudoku-bottom" maxlength="1">
+            <input class="input-field" id="50" type="sudoku-bottom-right" maxlength="1">
+            <input class="input-field" id="51" type="sudoku-bottom" maxlength="1">
+            <input class="input-field" id="52" type="sudoku-bottom" maxlength="1">
+            <input class="input-field" id="53" type="sudoku-bottom-right" maxlength="1">
+        </div>
+        <div class="row">
+            <input class="input-field" id="54" type="sudoku-left" maxlength="1">
+            <input class="input-field" id="55" type="sudoku" maxlength="1">
+            <input class="input-field" id="56" type="sudoku" maxlength="1">
+            <input class="input-field" id="57" type="sudoku-left" maxlength="1">
+            <input class="input-field" id="58" type="sudoku" maxlength="1">
+            <input class="input-field" id="59" type="sudoku" maxlength="1">
+            <input class="input-field" id="60" type="sudoku-left" maxlength="1">
+            <input class="input-field" id="61" type="sudoku" maxlength="1">
+            <input class="input-field" id="62" type="sudoku-right" maxlength="1">
+        </div>
+        <div class="row">
+            <input class="input-field" id="63" type="sudoku-left" maxlength="1">
+            <input class="input-field" id="64" type="sudoku" maxlength="1">
+            <input class="input-field" id="65" type="sudoku-right" maxlength="1">
+            <input class="input-field" id="66" type="sudoku" maxlength="1">
+            <input class="input-field" id="67" type="sudoku" maxlength="1">
+            <input class="input-field" id="68" type="sudoku-right" maxlength="1">
+            <input class="input-field" id="69" type="sudoku" maxlength="1">
+            <input class="input-field" id="70" type="sudoku" maxlength="1">
+            <input class="input-field" id="71" type="sudoku-right" maxlength="1">
+        </div>
+        <div class="row">
+            <input class="input-field" id="72" type="sudoku-bottom-left" maxlength="1">
+            <input class="input-field" id="73" type="sudoku-bottom" maxlength="1">
+            <input class="input-field" id="74" type="sudoku-bottom-right" maxlength="1">
+            <input class="input-field" id="75" type="sudoku-bottom" maxlength="1">
+            <input class="input-field" id="76" type="sudoku-bottom" maxlength="1">
+            <input class="input-field" id="77" type="sudoku-bottom-right" maxlength="1">
+            <input class="input-field" id="78" type="sudoku-bottom" maxlength="1">
+            <input class="input-field" id="79" type="sudoku-bottom" maxlength="1">
+            <input class="input-field" id="80" type="sudoku-bottom-right" maxlength="1">
+        </div>
+    </div><br>
 
-    <br><form>
-      <select name="difficulty" id="difficulty">
+    <div>
+        <button onclick="generateSudoku()">Neues Sudoku</button>&nbsp
+        <button onclick="lösen()">Sudoku lösen</button>&nbsp
+        <button onclick="printDiv('printableArea')">Dieses Sudoku ausdrucken</button>&nbsp
+
+        <br>
+        <form>
+            <select name="difficulty" id="difficulty">
         <option value="easy">Easy</option>
         <option value="medium">Medium</option>
         <option value="hard">Hard</option>
         <option value="expert">Expert</option>
       </select>
-    </form><br>
+        </form><br>
 
-  </div>&nbsp
+    </div>&nbsp
 
 </body>
 
 </html>
 
 <script>
+    ////////////////////////////////////////////////////////////////////////////////// Timer Function //////////////////////////////////////////////////////////////////////////////////////////////////
 
-////////////////////////////////////////////////////////////////////////////////// Timer Function //////////////////////////////////////////////////////////////////////////////////////////////////
+    let seconds = 0; // Here we count the seconds and minutes
+    let minutes = 0;
+    let timerInterval;
 
-let seconds = 0; // Here we count the seconds and minutes
-let minutes = 0;
-let timerInterval;
+    function updateTimer() {
+        seconds++; // Every time the functions runs it adds 1 to seconds
+        if (seconds >= 60) {
+            seconds = 0; // Ones seconds is >60 its set to 0 and 1 is added to minutes
+            minutes++;
+        }
 
-function updateTimer() {
-  seconds++;  // Every time the functions runs it adds 1 to seconds
-  if (seconds >= 60) {
-    seconds = 0;  // Ones seconds is >60 its set to 0 and 1 is added to minutes
-    minutes++;
-  }
-
-    const formattedTime = `Time: ${minutes}:${seconds.toString().padStart(2, '0')}`;  // The formatted String for the Timer Display
-    document.getElementById('timer').innerText = formattedTime; // The Timer Element that gets edited every time
-  }
-
-function startTimer() {
-    clearInterval(timerInterval);
-    timerInterval = setInterval(updateTimer, 1000); // The function updateTimer is run every 1000ms = 1s
-  }
-
-function stopTimer() {
-    clearInterval(timerInterval); // We cleare the interval in which the updateTimer function runs (1000ms), so it stops
-  }
-
-function resetTimer() {
-    stopTimer();  // We stop the timer
-    seconds = 0;
-    minutes = 0;  // And reset seconds and minutes let to 0
-    document.getElementById('timer').innerText = 'Time: 0:00'; // We also reset the time display
-  }
-
-//////////////////////////////////////////////////////////////////////////////// Everything to print a sudoku ///////////////////////////////////////////////////////////////////////////////////////////////////
-
-function printDiv(divName) {  // divName is the div we want to print out
-     var printContents = document.getElementById(divName).innerHTML;  // Obtain the HTML content inside div
-     var originalContents = document.body.innerHTML;  // Stores the current content of the entire document(div) body
-
-     document.body.innerHTML = printContents;
-
-     window.print();  // The print function
-
-     document.body.innerHTML = originalContents;  // Restore the original content back to the document body
-}
-
-/////////////////////////////////////////////////////////////////////////////// Everything about difficulties /////////////////////////////////////////////////////////////////////////////////////////
-
-function getRndInteger(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) ) + min;  // Function to get a random int in the range of...
-}
-
-var easy = getRndInteger(35, 38)
-var medium = getRndInteger(29, 34)
-var hard = getRndInteger(23, 28)
-var expert = getRndInteger(18, 22)
-
-///////////////////////////////////////////////////////////////////////////////// Everything to generate a sudoku /////////////////////////////////////////////////////////////////////////////
-
-var puzzle
-var formattedString
-const arr = [];
-var value
-let count
-
-function generateSudoku() {
-
-  resetTimer()  // We start by resetting the timer
-
-  var e = document.getElementById("difficulty");
-  value = e.value;
-
-  if(value === "easy") {
-    value = easy
-  } else if(value === "medium") {
-    value = medium
-  } else if(value === "hard") {
-    value = hard
-  } else if (value === "expert") {
-    value = expert
-  }
-
-  const NewformattedCount = `Felder ausgefüllt: 0/81`;  // The formatted String for the Timer Display
-  document.getElementById('count').innerText = NewformattedCount; // The Timer Element that gets edited every time
-
-  for (let i = 0; i <= 80; i++) {
-        document.getElementById(i.toString()).placeholder = "";
-        document.getElementById(i.toString()).style.pointerEvents = "all"
-        document.getElementById(i.toString()).value = ""
+        const formattedTime = `Time: ${minutes}:${seconds.toString().padStart(2, '0')}`; // The formatted String for the Timer Display
+        document.getElementById('timer').innerText = formattedTime; // The Timer Element that gets edited every time
     }
 
-  puzzle = generateSudokuGrid()
-  var sudoku = String(puzzle)
-
-  formattedString = sudoku.split(" ").join("").split(",").join("").split("[").join("").split("]").join("").replace(/\s/g, '');
-
-  for (let i = 0; i < formattedString.length; i++) {
-    arr.push(formattedString[i]);
-  }
-
-  count = 0
-
-  function countNonZeroNumbers(arr) {
-    count = 0
-    for (let i = 0; i < arr.length; i++) {
-      num = 0; num =  parseInt(arr[i]);
-      if (!isNaN(num) && num !== 0) {
-        count++;
-      }
+    function startTimer() {
+        clearInterval(timerInterval);
+        timerInterval = setInterval(updateTimer, 1000); // The function updateTimer is run every 1000ms = 1s
     }
-    return count;
-  }
 
-  countNonZeroNumbers(arr)
+    function stopTimer() {
+        clearInterval(timerInterval); // We cleare the interval in which the updateTimer function runs (1000ms), so it stops
+    }
 
-  const formattedCount = `Felder ausgefüllt: ${count}/81`;  // The formatted String for the Timer Display
-  document.getElementById('count').innerText = formattedCount; // The Timer Element that gets edited every time
+    function resetTimer() {
+        stopTimer(); // We stop the timer
+        seconds = 0;
+        minutes = 0; // And reset seconds and minutes let to 0
+        document.getElementById('timer').innerText = 'Time: 0:00'; // We also reset the time display
+    }
 
-  console.log(count)
+    //////////////////////////////////////////////////////////////////////////////// Everything to print a sudoku ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-  for (let i = 0; i <= 80; i++) {
-      if (formattedString[i] !== "0") {
-          document.getElementById(i.toString()).placeholder = formattedString[i];
-          document.getElementById(i.toString()).style.pointerEvents = "none"
+    function printDiv(divName) { // divName is the div we want to print out
+        var printContents = document.getElementById(divName).innerHTML; // Obtain the HTML content inside div
+        var originalContents = document.body.innerHTML; // Stores the current content of the entire document(div) body
+
+        document.body.innerHTML = printContents;
+
+        window.print(); // The print function
+
+        document.body.innerHTML = originalContents; // Restore the original content back to the document body
+    }
+
+    /////////////////////////////////////////////////////////////////////////////// Everything about difficulties /////////////////////////////////////////////////////////////////////////////////////////
+
+    function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min; // Function to get a random int in the range of...
+    }
+
+    var easy = getRndInteger(35, 38)
+    var medium = getRndInteger(29, 34)
+    var hard = getRndInteger(23, 28)
+    var expert = getRndInteger(18, 22)
+
+    ///////////////////////////////////////////////////////////////////////////////// Everything to generate a sudoku /////////////////////////////////////////////////////////////////////////////
+
+    var puzzle
+    var formattedString
+    const arr = [];
+    var value
+    let count
+
+    function generateSudoku() {
+
+        resetTimer() // We start by resetting the timer
+
+        var e = document.getElementById("difficulty");
+        value = e.value;
+
+        if (value === "easy") {
+            value = easy
+        } else if (value === "medium") {
+            value = medium
+        } else if (value === "hard") {
+            value = hard
+        } else if (value === "expert") {
+            value = expert
+        }
+
+        const NewformattedCount = `Felder ausgefüllt: 0/81`; // The formatted String for the Timer Display
+        document.getElementById('count').innerText = NewformattedCount; // The Timer Element that gets edited every time
+
+        for (let i = 0; i <= 80; i++) {
+            document.getElementById(i.toString()).placeholder = "";
+            document.getElementById(i.toString()).style.pointerEvents = "all"
+            document.getElementById(i.toString()).value = ""
+        }
+
+        puzzle = generateSudokuGrid()
+        var sudoku = String(puzzle)
+
+        formattedString = sudoku.split(" ").join("").split(",").join("").split("[").join("").split("]").join("").replace(/\s/g, '');
+
+        for (let i = 0; i < formattedString.length; i++) {
+            arr.push(formattedString[i]);
+        }
+
+        count = 0
+
+        function countNonZeroNumbers(arr) {
+            count = 0
+            for (let i = 0; i < arr.length; i++) {
+                num = 0;
+                num = parseInt(arr[i]);
+                if (!isNaN(num) && num !== 0) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        countNonZeroNumbers(arr)
+
+        const formattedCount = `Felder ausgefüllt: ${count}/81`; // The formatted String for the Timer Display
+        document.getElementById('count').innerText = formattedCount; // The Timer Element that gets edited every time
+
+        console.log(count)
+
+        for (let i = 0; i <= 80; i++) {
+            if (formattedString[i] !== "0") {
+                document.getElementById(i.toString()).placeholder = formattedString[i];
+                document.getElementById(i.toString()).style.pointerEvents = "none"
+            }
+        }
+
+        startTimer(); // Start the timer
+
+    }
+
+    function generateSudokuGrid() {
+        const grid = Array.from({
+            length: 9
+        }, () => Array(9).fill(0));
+
+        // Fill the diagonal 3x3 subgrids with random values
+        for (let i = 0; i < 9; i += 3) {
+            fillSubgrid(grid, i, i);
+        }
+
+        // Solve the Sudoku grid
+        solveSudoku(grid);
+
+        // Remove random cells to create a puzzle
+        const puzzleGrid = removeCells(grid);
+
+        return puzzleGrid;
+    }
+
+    function fillSubgrid(grid, startRow, startCol) {
+        const values = shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+
+        let valueIndex = 0;
+        for (let row = startRow; row < startRow + 3; row++) {
+            for (let col = startCol; col < startCol + 3; col++) {
+                grid[row][col] = values[valueIndex];
+                valueIndex++;
+            }
         }
     }
 
-    startTimer(); // Start the timer
-
-}
-
-function generateSudokuGrid() {
-  const grid = Array.from({ length: 9 }, () => Array(9).fill(0));
-
-  // Fill the diagonal 3x3 subgrids with random values
-  for (let i = 0; i < 9; i += 3) {
-    fillSubgrid(grid, i, i);
-  }
-
-  // Solve the Sudoku grid
-  solveSudoku(grid);
-
-  // Remove random cells to create a puzzle
-  const puzzleGrid = removeCells(grid);
-
-  return puzzleGrid;
-}
-
-function fillSubgrid(grid, startRow, startCol) {
-  const values = shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9]);
-
-  let valueIndex = 0;
-  for (let row = startRow; row < startRow + 3; row++) {
-    for (let col = startCol; col < startCol + 3; col++) {
-      grid[row][col] = values[valueIndex];
-      valueIndex++;
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
     }
-  }
-}
 
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-}
+    function solveSudoku(grid) {
+        const emptyCell = findEmptyCell(grid);
+        if (!emptyCell) {
+            return true; // Sudoku grid solved
+        }
 
-function solveSudoku(grid) {
-  const emptyCell = findEmptyCell(grid);
-  if (!emptyCell) {
-    return true; // Sudoku grid solved
-  }
+        const [row, col] = emptyCell;
 
-  const [row, col] = emptyCell;
+        for (let num = 1; num <= 9; num++) {
+            if (isValidMove(grid, row, col, num)) {
+                grid[row][col] = num;
 
-  for (let num = 1; num <= 9; num++) {
-    if (isValidMove(grid, row, col, num)) {
-      grid[row][col] = num;
+                if (solveSudoku(grid)) {
+                    return true;
+                }
 
-      if (solveSudoku(grid)) {
+                grid[row][col] = 0; // Backtrack
+            }
+        }
+
+        return false; // Sudoku grid unsolvable
+    }
+
+    function findEmptyCell(grid) {
+        for (let row = 0; row < 9; row++) {
+            for (let col = 0; col < 9; col++) {
+                if (grid[row][col] === 0) {
+                    return [row, col];
+                }
+            }
+        }
+        return null; // No empty cell found
+    }
+
+    function isValidMove(grid, row, col, num) {
+        return (
+            isRowValid(grid, row, num) &&
+            isColumnValid(grid, col, num) &&
+            isSubgridValid(grid, row - (row % 3), col - (col % 3), num)
+        );
+    }
+
+    function isRowValid(grid, row, num) {
+        for (let col = 0; col < 9; col++) {
+            if (grid[row][col] === num) {
+                return false;
+            }
+        }
         return true;
-      }
-
-      grid[row][col] = 0; // Backtrack
     }
-  }
 
-  return false; // Sudoku grid unsolvable
-}
-
-function findEmptyCell(grid) {
-  for (let row = 0; row < 9; row++) {
-    for (let col = 0; col < 9; col++) {
-      if (grid[row][col] === 0) {
-        return [row, col];
-      }
-    }
-  }
-  return null; // No empty cell found
-}
-
-function isValidMove(grid, row, col, num) {
-  return (
-    isRowValid(grid, row, num) &&
-    isColumnValid(grid, col, num) &&
-    isSubgridValid(grid, row - (row % 3), col - (col % 3), num)
-  );
-}
-
-function isRowValid(grid, row, num) {
-  for (let col = 0; col < 9; col++) {
-    if (grid[row][col] === num) {
-      return false;
-    }
-  }
-  return true;
-}
-
-function isColumnValid(grid, col, num) {
-  for (let row = 0; row < 9; row++) {
-    if (grid[row][col] === num) {
-      return false;
-    }
-  }
-  return true;
-}
-
-function isSubgridValid(grid, startRow, startCol, num) {
-  for (let row = 0; row < 3; row++) {
-    for (let col = 0; col < 3; col++) {
-      if (grid[startRow + row][startCol + col] === num) {
-        return false;
-      }
-    }
-  }
-  return true;
-}
-
-function removeCells(grid) {
-  const difficulty = 81-value; // Adjust the number of cells to remove as per desired difficulty
-
-  for (let i = 0; i < difficulty; i++) {
-    let row, col;
-    do {
-      row = Math.floor(Math.random() * 9);
-      col = Math.floor(Math.random() * 9);
-    } while (grid[row][col] === 0);
-
-    grid[row][col] = 0;
-  }
-
-  return grid;
-}
-
-function formatSudoku() {
-
-  var sudoku = "";
-  for (var i = 0; i <= 80; i++) {
-    sudoku += number[i] + " ";
-    if (i % 3 === 2 && i % 9 !== 8) {
-      sudoku += "| ";
-    }
-    if (i % 9 === 8 && i !== 80) {
-      sudoku += "\n";
-      if (i % 27 === 26) {
-        sudoku += "------+-------+------\n";
-      }
-    }
-  }
-}
-
-/////////////////////////////////////////////////////////////////////////////////// Everything to solve a sudoku //////////////////////////////////////////////////////////////////////////////////////////
-
-// This code has been (mostly) generated by ChatGPT.
-// Minor modifications were made to provide ES6 syntax (let/const)
-// and use true equality operators (== -> ===)
-// That's about it.
-
-function solveSudoku(grid) {
-  // Find the next empty cell in the puzzle
-  const emptyCell = findEmptyCell(grid);
-
-  // If there are no more empty cells, the puzzle is solved
-  if (!emptyCell) {
-    return true;
-  }
-
-  // Try each possible value for the empty cell
-  for (let i = 1; i <= 9; i++) {
-    // If the value is valid for the empty cell, fill it in and
-    // try to solve the rest of the puzzle
-    if (isValidValue(grid, emptyCell, i)) {
-      grid[emptyCell.row][emptyCell.col] = i;
-      if (solveSudoku(grid)) {
+    function isColumnValid(grid, col, num) {
+        for (let row = 0; row < 9; row++) {
+            if (grid[row][col] === num) {
+                return false;
+            }
+        }
         return true;
-      }
     }
-  }
 
-  // If none of the values work, backtrack and try a different value
-  grid[emptyCell.row][emptyCell.col] = 0;
-  return false;
-}
-
-function findEmptyCell(grid) {
-  // Search the grid for the next empty cell
-  for (let i = 0; i < 9; i++) {
-    for (let j = 0; j < 9; j++) {
-      if (grid[i][j] === 0) {
-        return { row: i, col: j };
-      }
+    function isSubgridValid(grid, startRow, startCol, num) {
+        for (let row = 0; row < 3; row++) {
+            for (let col = 0; col < 3; col++) {
+                if (grid[startRow + row][startCol + col] === num) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
-  }
 
-  // If there are no more empty cells, return null
-  return null;
-}
+    function removeCells(grid) {
+        const difficulty = 81 - value; // Adjust the number of cells to remove as per desired difficulty
 
-function isValidValue(grid, cell, value) {
-  // Check if the value is already used in the row
-  for (let i = 0; i < 9; i++) {
-    if (grid[cell.row][i] === value) {
-      return false;
+        for (let i = 0; i < difficulty; i++) {
+            let row, col;
+            do {
+                row = Math.floor(Math.random() * 9);
+                col = Math.floor(Math.random() * 9);
+            } while (grid[row][col] === 0);
+
+            grid[row][col] = 0;
+        }
+
+        return grid;
     }
-  }
 
-  // Check if the value is already used in the column
-  for (let i = 0; i < 9; i++) {
-    if (grid[i][cell.col] === value) {
-      return false;
+    function formatSudoku() {
+
+        var sudoku = "";
+        for (var i = 0; i <= 80; i++) {
+            sudoku += number[i] + " ";
+            if (i % 3 === 2 && i % 9 !== 8) {
+                sudoku += "| ";
+            }
+            if (i % 9 === 8 && i !== 80) {
+                sudoku += "\n";
+                if (i % 27 === 26) {
+                    sudoku += "------+-------+------\n";
+                }
+            }
+        }
     }
-  }
 
-  // Check if the value is already used in the 3x3 block
-  const blockRow = Math.floor(cell.row / 3) * 3;
-  const blockCol = Math.floor(cell.col / 3) * 3;
-  for (let i = 0; i < 3; i++) {
-    for (let j = 0; j < 3; j++) {
-      if (grid[blockRow + i][blockCol + j] === value) {
+    /////////////////////////////////////////////////////////////////////////////////// Everything to solve a sudoku //////////////////////////////////////////////////////////////////////////////////////////
+
+    // This code has been (mostly) generated by ChatGPT.
+    // Minor modifications were made to provide ES6 syntax (let/const)
+    // and use true equality operators (== -> ===)
+    // That's about it.
+
+    function solveSudoku(grid) {
+        // Find the next empty cell in the puzzle
+        const emptyCell = findEmptyCell(grid);
+
+        // If there are no more empty cells, the puzzle is solved
+        if (!emptyCell) {
+            return true;
+        }
+
+        // Try each possible value for the empty cell
+        for (let i = 1; i <= 9; i++) {
+            // If the value is valid for the empty cell, fill it in and
+            // try to solve the rest of the puzzle
+            if (isValidValue(grid, emptyCell, i)) {
+                grid[emptyCell.row][emptyCell.col] = i;
+                if (solveSudoku(grid)) {
+                    return true;
+                }
+            }
+        }
+
+        // If none of the values work, backtrack and try a different value
+        grid[emptyCell.row][emptyCell.col] = 0;
         return false;
-      }
     }
-  }
 
-  // If the value is not used in the row, column, or block, it is valid
-  return true;
-}
+    function findEmptyCell(grid) {
+        // Search the grid for the next empty cell
+        for (let i = 0; i < 9; i++) {
+            for (let j = 0; j < 9; j++) {
+                if (grid[i][j] === 0) {
+                    return {
+                        row: i,
+                        col: j
+                    };
+                }
+            }
+        }
 
-function lösen() {
-  solveSudoku(puzzle);
-  var formattedString = String(puzzle).split(" ").join("").split(",").join("").split("[").join("").split("]").join("").replace(/\s/g, '');
+        // If there are no more empty cells, return null
+        return null;
+    }
 
-  for (let i = 0; i <= 80; i++) {
-      if (formattedString[i] !== "0") {
-          document.getElementById(i.toString()).placeholder = formattedString[i];
-          document.getElementById(i.toString()).style.pointerEvents = "none"
+    function isValidValue(grid, cell, value) {
+        // Check if the value is already used in the row
+        for (let i = 0; i < 9; i++) {
+            if (grid[cell.row][i] === value) {
+                return false;
+            }
+        }
+
+        // Check if the value is already used in the column
+        for (let i = 0; i < 9; i++) {
+            if (grid[i][cell.col] === value) {
+                return false;
+            }
+        }
+
+        // Check if the value is already used in the 3x3 block
+        const blockRow = Math.floor(cell.row / 3) * 3;
+        const blockCol = Math.floor(cell.col / 3) * 3;
+        for (let i = 0; i < 3; i++) {
+            for (let j = 0; j < 3; j++) {
+                if (grid[blockRow + i][blockCol + j] === value) {
+                    return false;
+                }
+            }
+        }
+
+        // If the value is not used in the row, column, or block, it is valid
+        return true;
+    }
+
+    function lösen() {
+        solveSudoku(puzzle);
+        var formattedString = String(puzzle).split(" ").join("").split(",").join("").split("[").join("").split("]").join("").replace(/\s/g, '');
+
+        for (let i = 0; i <= 80; i++) {
+            if (formattedString[i] !== "0") {
+                document.getElementById(i.toString()).placeholder = formattedString[i];
+                document.getElementById(i.toString()).style.pointerEvents = "none"
+            }
+        }
+
+        stopTimer() // Stop the timer
+    }
+
+    generateSudoku()
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    // Global variable to store the previous state of the sudoku grid
+    let previousSudokuState = [];
+
+    var mistakes = 0
+
+    function getRowAndCell(index) {
+        const row = Math.floor(index / 9);
+        const cell = index % 9;
+        return {
+            row,
+            cell
+        };
+    }
+
+    function checkInput(inputElement, index) {
+
+        // Check if the input value has changed
+        const newValue = inputElement.value;
+        const oldValue = arr[index];
+
+        if (newValue !== oldValue) {
+            const {
+                row,
+                cell
+            } = getRowAndCell(index);
+            // Do whatever you want to do when an input is edited.
+
+            function editArrayWithNumber(arr, num, row, cell) {
+                const index = row * 9 + cell; // Calculate the index based on the row and cell
+                arr[index] = num.toString(); // Update the value at the calculated index
+            }
+
+            editArrayWithNumber(arr, newValue, row, cell);
+            console.log(arr);
+
+            function convertToSudoku(inputList) {
+                let sudokuBoard = new Array(9).fill(null).map(() => new Array(9).fill('.'));
+
+                for (let i = 0; i < 81; i++) {
+                    const row = Math.floor(i / 9);
+                    const col = i % 9;
+                    sudokuBoard[row][col] = inputList[i];
+                }
+
+                return sudokuBoard;
+            }
+
+            const sudokuBoard = convertToSudoku(arr);
+
+            console.log(arr[index])
+
+            if (isValidSudoku(sudokuBoard) === true) {
+                document.getElementById(index.toString()).style.pointerEvents = "none"
+                document.getElementById(index.toString()).style.backgroundColor = "#99ff99"
+            } else {
+                document.getElementById(index.toString()).value = " "
+                document.getElementById(index.toString()).style.backgroundColor = "#ff6666"
+                mistakes = mistakes + 1
+
+                if (mistakes === 3) {
+                    lösen()
+                }
+
+                const formattedMistakes = `Fehler: ${mistakes}/3`; // The formatted String for the Timer Display
+                document.getElementById('mistakes').innerText = formattedMistakes; // The Timer Element that gets edited every time
+            }
+
         }
     }
 
-    stopTimer() // Stop the timer
-}
+    function checkSudokuState() {
+        const inputElements = document.querySelectorAll('#sudoku-grid input');
 
-generateSudoku()
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// Global variable to store the previous state of the sudoku grid
-let previousSudokuState = [];
-
-var mistakes = 0
-
-function getRowAndCell(index) {
-  const row = Math.floor(index / 9);
-  const cell = index % 9;
-  return { row, cell };
-}
-
-function checkInput(inputElement, index) {
-
-  // Check if the input value has changed
-  const newValue = inputElement.value;
-  const oldValue = arr[index];
-
-  if (newValue !== oldValue) {
-    const { row, cell } = getRowAndCell(index);
-    // Do whatever you want to do when an input is edited.
-
-    function editArrayWithNumber(arr, num, row, cell) {
-      const index = row * 9 + cell; // Calculate the index based on the row and cell
-      arr[index] = num.toString(); // Update the value at the calculated index
-    }
-    
-    editArrayWithNumber(arr, newValue, row, cell);
-    console.log(arr);
-
-    function convertToSudoku(inputList) {
-      let sudokuBoard = new Array(9).fill(null).map(() => new Array(9).fill('.'));
-
-      for (let i = 0; i < 81; i++) {
-        const row = Math.floor(i / 9);
-        const col = i % 9;
-        sudokuBoard[row][col] = inputList[i];
-      }
-
-      return sudokuBoard;
-    }
-
-    const sudokuBoard = convertToSudoku(arr);
-
-    console.log(arr[index])
-
-    if(isValidSudoku(sudokuBoard) === true) {
-      document.getElementById(index.toString()).style.pointerEvents = "none"
-      document.getElementById(index.toString()).style.backgroundColor = "#99ff99"
-    }
-    else {
-      document.getElementById(index.toString()).value = " "
-      document.getElementById(index.toString()).style.backgroundColor = "#ff6666"
-      mistakes = mistakes + 1
-
-      if(mistakes === 3) {
-        lösen()
-      }
-
-      const formattedMistakes = `Fehler: ${mistakes}/3`;  // The formatted String for the Timer Display
-      document.getElementById('mistakes').innerText = formattedMistakes; // The Timer Element that gets edited every time
-    }
-
-  }
-}
-
-function checkSudokuState() {
-  const inputElements = document.querySelectorAll('#sudoku-grid input');
-
-  // Compare current sudoku state with the previous one
-  for (let i = 0; i < inputElements.length; i++) {
-    if (inputElements[i].value !== previousSudokuState[i]) {
-      checkInput(inputElements[i], i);
-    }
-  }
-
-  // Save the current state of the sudoku grid for the next iteration
-  previousSudokuState = Array.from(inputElements, input => input.value);
-}
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-const isValidSudoku = (board) => {
-    const obj = { 
-        rows: {}, // 9 rows, each containing 9 cells across
-        columns: {}, // 9 columns, each containing 9 cells down
-        blocks: {}, // 9 blocks, each containing 3x3 cells inside
-    };
-    
-    let isValid = true;
-    
-    loop1:
-    for (let r = 0; r < board.length; r++) {
-        
-        loop2:
-        for (let c = 0; c < board[r].length; c++) {
-            
-            const cellValue = board[r][c];
-            
-            if (cellValue === '0') {
-                continue;
-            }
-            
-            // 1: validate rows
-            if (!obj.rows.hasOwnProperty(r)) {
-                obj.rows[r] = {};
-            }
-            
-            if (obj.rows[r].hasOwnProperty(cellValue)) {
-                isValid = false;
-                break loop1;
-            } else {
-                obj.rows[r][cellValue] = null;   
-            }
-            
-            // 2: validate columns
-            if (!obj.columns.hasOwnProperty(c)) {
-                obj.columns[c] = {};
-            }
-            
-            if (obj.columns[c].hasOwnProperty(cellValue)) {
-                isValid = false;
-                break loop1;
-            } else {
-                obj.columns[c][cellValue] = null;   
-            }
-            
-            // 3: validate grid
-            const b = getBlockNumber(r, c);
-            
-            if (!obj.blocks.hasOwnProperty(b)) {
-                obj.blocks[b] = {};
-            }
-            
-            if (obj.blocks[b].hasOwnProperty(cellValue)) {
-                isValid = false;
-                break loop1;
-            } else {
-                obj.blocks[b][cellValue] = null;   
+        // Compare current sudoku state with the previous one
+        for (let i = 0; i < inputElements.length; i++) {
+            if (inputElements[i].value !== previousSudokuState[i]) {
+                checkInput(inputElements[i], i);
             }
         }
+
+        // Save the current state of the sudoku grid for the next iteration
+        previousSudokuState = Array.from(inputElements, input => input.value);
     }
-    
-    return isValid;
-};
 
-// if row = 8 & column = 5
-// then quotients = 2, 1
-// therefore blockNumber = 8
-const getBlockNumber = (row, column) => {
-    const rowQuotient = parseInt(row / 3, 10);
-    const columnQuotient = parseInt(column / 3, 10);
-    
-    let blockNumber;
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    switch(`${rowQuotient}${columnQuotient}`) {
-        case '00': blockNumber = 0; break;
-        case '01': blockNumber = 1; break;
-        case '02': blockNumber = 2; break;
-        case '10': blockNumber = 3; break;
-        case '11': blockNumber = 4; break;
-        case '12': blockNumber = 5; break;
-        case '20': blockNumber = 6; break;
-        case '21': blockNumber = 7; break;
-        case '22': blockNumber = 8; break;
+    const isValidSudoku = (board) => {
+        const obj = {
+            rows: {}, // 9 rows, each containing 9 cells across
+            columns: {}, // 9 columns, each containing 9 cells down
+            blocks: {}, // 9 blocks, each containing 3x3 cells inside
+        };
+
+        let isValid = true;
+
+        loop1:
+            for (let r = 0; r < board.length; r++) {
+
+                loop2: for (let c = 0; c < board[r].length; c++) {
+
+                    const cellValue = board[r][c];
+
+                    if (cellValue === '0') {
+                        continue;
+                    }
+
+                    // 1: validate rows
+                    if (!obj.rows.hasOwnProperty(r)) {
+                        obj.rows[r] = {};
+                    }
+
+                    if (obj.rows[r].hasOwnProperty(cellValue)) {
+                        isValid = false;
+                        break loop1;
+                    } else {
+                        obj.rows[r][cellValue] = null;
+                    }
+
+                    // 2: validate columns
+                    if (!obj.columns.hasOwnProperty(c)) {
+                        obj.columns[c] = {};
+                    }
+
+                    if (obj.columns[c].hasOwnProperty(cellValue)) {
+                        isValid = false;
+                        break loop1;
+                    } else {
+                        obj.columns[c][cellValue] = null;
+                    }
+
+                    // 3: validate grid
+                    const b = getBlockNumber(r, c);
+
+                    if (!obj.blocks.hasOwnProperty(b)) {
+                        obj.blocks[b] = {};
+                    }
+
+                    if (obj.blocks[b].hasOwnProperty(cellValue)) {
+                        isValid = false;
+                        break loop1;
+                    } else {
+                        obj.blocks[b][cellValue] = null;
+                    }
+                }
+            }
+
+        return isValid;
     };
 
-    return blockNumber;
-};
+    // if row = 8 & column = 5
+    // then quotients = 2, 1
+    // therefore blockNumber = 8
+    const getBlockNumber = (row, column) => {
+        const rowQuotient = parseInt(row / 3, 10);
+        const columnQuotient = parseInt(column / 3, 10);
 
-// Run the checkSudokuState function every second (1000 milliseconds)
-setInterval(checkSudokuState, 1000);
+        let blockNumber;
 
+        switch (`${rowQuotient}${columnQuotient}`) {
+            case '00':
+                blockNumber = 0;
+                break;
+            case '01':
+                blockNumber = 1;
+                break;
+            case '02':
+                blockNumber = 2;
+                break;
+            case '10':
+                blockNumber = 3;
+                break;
+            case '11':
+                blockNumber = 4;
+                break;
+            case '12':
+                blockNumber = 5;
+                break;
+            case '20':
+                blockNumber = 6;
+                break;
+            case '21':
+                blockNumber = 7;
+                break;
+            case '22':
+                blockNumber = 8;
+                break;
+        };
+
+        return blockNumber;
+    };
+
+    // Run the checkSudokuState function every second (1000 milliseconds)
+    setInterval(checkSudokuState, 1000);
 </script>

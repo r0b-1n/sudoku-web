@@ -1,138 +1,139 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Sudoku online spielen - kostenlos</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="icon" type="image/x-icon" href="favicon.png">
+    <title>Sudoku online spielen - kostenlos</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
 
-  <meta content="Play Sudoku in your Browser" property="og:title" />
-  <meta content="Slove your Sudokus alone or play against your friends in some cool modes!" property="og:description" />
-  <meta content="https://sudoku.cyclic.app/" property="og:url" />
-  <meta content="https://sudoku.cyclic.app/favicon.png" property="og:image" />
-  <meta content="#43B581" data-react-helmet="true" name="theme-color" />
-
+    <meta content="Play Sudoku in your Browser" property="og:title" />
+    <meta content="Slove your Sudokus alone or play against your friends in some cool modes!" property="og:description" />
+    <meta content="https://sudoku.cyclic.app/" property="og:url" />
+    <meta content="https://sudoku.cyclic.app/favicon.png" property="og:image" />
+    <meta name="og:image" content="summary_large_image">
+    <meta content="#43B581" data-react-helmet="true" name="theme-color" />
 </head>
 
 <body>
-
-  <section>
-    <div class="crossword">
-      <div class="row">
-        <input type="number-top-left" placeholder="5" maxlength="1">
-        <input type="number-top" placeholder="3" maxlength="1">
-        <input type="number-top-right" maxlength="1">
-        <input type="number-top" maxlength="1">
-        <input type="number-top" placeholder="7" maxlength="1">
-        <input type="number-top-right" maxlength="1">
-        <input type="number-top" maxlength="1">
-        <input type="number-top" maxlength="1">
-        <input type="number-top-right" maxlength="1">
-      </div>
-      <div class="row">
-        <input type="number-left" placeholder="6" maxlength="1">
-        <input type="number" maxlength="1">
-        <input type="number-right" maxlength="1">
-        <input type="number" placeholder="1" maxlength="1">
-        <input type="number" placeholder="9" maxlength="1">
-        <input type="number-right" placeholder="5" maxlength="1">
-        <input type="number" maxlength="1">
-        <input type="number" maxlength="1">
-        <input type="number-right" maxlength="1">
-      </div>    
-      <div class="row">
-        <input type="number-bottom-left" maxlength="1">
-        <input type="number-bottom" placeholder="9" maxlength="1">
-        <input type="number-bottom-right" placeholder="8" maxlength="1">
-        <input type="number-bottom" maxlength="1">
-        <input type="number-bottom" maxlength="1">
-        <input type="number-bottom-right" maxlength="1">
-        <input type="number-bottom" maxlength="1">
-        <input type="number-bottom" placeholder="6" maxlength="1">
-        <input type="number-bottom-right" maxlength="1">
-      </div>    
-      <div class="row">
-        <input type="number-left" placeholder="8" maxlength="1">
-        <input type="number" maxlength="1">
-        <input type="number-right" maxlength="1">
-        <input type="number" maxlength="1">
-        <input type="number" placeholder="6" maxlength="1">
-        <input type="number-right" maxlength="1">
-        <input type="number" maxlength="1">
-        <input type="number" maxlength="1">
-        <input type="number-right" placeholder="3" maxlength="1">
-      </div>    
-      <div class="row">
-        <input type="number-left" placeholder="4" maxlength="1">
-        <input type="number" maxlength="1">
-        <input type="number-right" maxlength="1">
-        <input type="number" placeholder="8" maxlength="1">
-        <input type="number" maxlength="1">
-        <input type="number-right" placeholder="3" maxlength="1">
-        <input type="number" maxlength="1">
-        <input type="number" maxlength="1">
-        <input type="number-right" placeholder="1" maxlength="1">
-      </div>   
-      <div class="row">
-        <input type="number-bottom-left" placeholder="7" maxlength="1">
-        <input type="number-bottom" maxlength="1">
-        <input type="number-bottom-right" maxlength="1">
-        <input type="number-bottom" maxlength="1">
-        <input type="number-bottom" placeholder="2" maxlength="1">
-        <input type="number-bottom-right" maxlength="1">
-        <input type="number-bottom" maxlength="1">
-        <input type="number-bottom" maxlength="1">
-        <input type="number-bottom-right" placeholder="6" maxlength="1">
-      </div>    
-      <div class="row">
-        <input type="number-left" maxlength="1">
-        <input type="number" placeholder="6" maxlength="1">
-        <input type="number" maxlength="1">
-        <input type="number-left" maxlength="1">
-        <input type="number" maxlength="1">
-        <input type="number" maxlength="1">
-        <input type="number-left" placeholder="2" maxlength="1">
-        <input type="number" placeholder="8" maxlength="1">
-        <input type="number-right" maxlength="1">
-      </div>    
-      <div class="row">
-        <input type="number-left" maxlength="1">
-        <input type="number" maxlength="1">
-        <input type="number-right" maxlength="1">
-        <input type="number" placeholder="4" maxlength="1">
-        <input type="number" placeholder="1" maxlength="1">
-        <input type="number-right" placeholder="9" maxlength="1">
-        <input type="number" maxlength="1">
-        <input type="number" maxlength="1">
-        <input type="number-right" placeholder="5" maxlength="1">
-      </div>   
-      <div class="row">
-        <input type="number-bottom-left" maxlength="1">
-        <input type="number-bottom" maxlength="1">
-        <input type="number-bottom-right" maxlength="1">
-        <input type="number-bottom" maxlength="1">
-        <input type="number-bottom" placeholder="8" maxlength="1">
-        <input type="number-bottom-right" maxlength="1">
-        <input type="number-bottom" maxlength="1">
-        <input type="number-bottom" placeholder="7" maxlength="1">
-        <input type="number-bottom-right" placeholder="9" maxlength="1">
-      </div>
-    </div>
-  </section><br>
-  <section>
-      <button type="sudoku" onclick="location.href='/play';">Sudoku erstellen und lösen</button>
-      <button type="sudoku" onclick="location.href='/rooms';">Sudoku gegeneinander spielen</button>
-  </section><br>
-  <section>
-    <button type="sudoku"  onclick="location.href='/print';">Sudoku ausdrucken</button>
-  </section>
+    <section>
+        <div class="crossword">
+            <div class="row">
+                <input type="number-top-left" placeholder="5" maxlength="1">
+                <input type="number-top" placeholder="3" maxlength="1">
+                <input type="number-top-right" maxlength="1">
+                <input type="number-top" maxlength="1">
+                <input type="number-top" placeholder="7" maxlength="1">
+                <input type="number-top-right" maxlength="1">
+                <input type="number-top" maxlength="1">
+                <input type="number-top" maxlength="1">
+                <input type="number-top-right" maxlength="1">
+            </div>
+            <div class="row">
+                <input type="number-left" placeholder="6" maxlength="1">
+                <input type="number" maxlength="1">
+                <input type="number-right" maxlength="1">
+                <input type="number" placeholder="1" maxlength="1">
+                <input type="number" placeholder="9" maxlength="1">
+                <input type="number-right" placeholder="5" maxlength="1">
+                <input type="number" maxlength="1">
+                <input type="number" maxlength="1">
+                <input type="number-right" maxlength="1">
+            </div>
+            <div class="row">
+                <input type="number-bottom-left" maxlength="1">
+                <input type="number-bottom" placeholder="9" maxlength="1">
+                <input type="number-bottom-right" placeholder="8" maxlength="1">
+                <input type="number-bottom" maxlength="1">
+                <input type="number-bottom" maxlength="1">
+                <input type="number-bottom-right" maxlength="1">
+                <input type="number-bottom" maxlength="1">
+                <input type="number-bottom" placeholder="6" maxlength="1">
+                <input type="number-bottom-right" maxlength="1">
+            </div>
+            <div class="row">
+                <input type="number-left" placeholder="8" maxlength="1">
+                <input type="number" maxlength="1">
+                <input type="number-right" maxlength="1">
+                <input type="number" maxlength="1">
+                <input type="number" placeholder="6" maxlength="1">
+                <input type="number-right" maxlength="1">
+                <input type="number" maxlength="1">
+                <input type="number" maxlength="1">
+                <input type="number-right" placeholder="3" maxlength="1">
+            </div>
+            <div class="row">
+                <input type="number-left" placeholder="4" maxlength="1">
+                <input type="number" maxlength="1">
+                <input type="number-right" maxlength="1">
+                <input type="number" placeholder="8" maxlength="1">
+                <input type="number" maxlength="1">
+                <input type="number-right" placeholder="3" maxlength="1">
+                <input type="number" maxlength="1">
+                <input type="number" maxlength="1">
+                <input type="number-right" placeholder="1" maxlength="1">
+            </div>
+            <div class="row">
+                <input type="number-bottom-left" placeholder="7" maxlength="1">
+                <input type="number-bottom" maxlength="1">
+                <input type="number-bottom-right" maxlength="1">
+                <input type="number-bottom" maxlength="1">
+                <input type="number-bottom" placeholder="2" maxlength="1">
+                <input type="number-bottom-right" maxlength="1">
+                <input type="number-bottom" maxlength="1">
+                <input type="number-bottom" maxlength="1">
+                <input type="number-bottom-right" placeholder="6" maxlength="1">
+            </div>
+            <div class="row">
+                <input type="number-left" maxlength="1">
+                <input type="number" placeholder="6" maxlength="1">
+                <input type="number" maxlength="1">
+                <input type="number-left" maxlength="1">
+                <input type="number" maxlength="1">
+                <input type="number" maxlength="1">
+                <input type="number-left" placeholder="2" maxlength="1">
+                <input type="number" placeholder="8" maxlength="1">
+                <input type="number-right" maxlength="1">
+            </div>
+            <div class="row">
+                <input type="number-left" maxlength="1">
+                <input type="number" maxlength="1">
+                <input type="number-right" maxlength="1">
+                <input type="number" placeholder="4" maxlength="1">
+                <input type="number" placeholder="1" maxlength="1">
+                <input type="number-right" placeholder="9" maxlength="1">
+                <input type="number" maxlength="1">
+                <input type="number" maxlength="1">
+                <input type="number-right" placeholder="5" maxlength="1">
+            </div>
+            <div class="row">
+                <input type="number-bottom-left" maxlength="1">
+                <input type="number-bottom" maxlength="1">
+                <input type="number-bottom-right" maxlength="1">
+                <input type="number-bottom" maxlength="1">
+                <input type="number-bottom" placeholder="8" maxlength="1">
+                <input type="number-bottom-right" maxlength="1">
+                <input type="number-bottom" maxlength="1">
+                <input type="number-bottom" placeholder="7" maxlength="1">
+                <input type="number-bottom-right" placeholder="9" maxlength="1">
+            </div>
+        </div>
+    </section><br>
+    <section>
+        <button type="sudoku" onclick="location.href='/play';">Sudoku erstellen und lösen</button>
+        <button type="sudoku" onclick="location.href='/rooms';">Sudoku gegeneinander spielen</button>
+    </section><br>
+    <section>
+        <button type="sudoku" onclick="location.href='/print';">Sudoku ausdrucken</button>
+    </section>
 </body>
 
 <footer>
     <div>
         <a href="/datenschutz">Datenschutz</a><br>
         <a href="/impressum">Impressum</a><br>
-        <a href="/" >🇬🇧 English Version</a><br>
+        <a href="/">🇬🇧 English Version</a><br>
         <a href="https://github.com/r0b-1n/sudoku-web">Github</a><br>
     </div>
 </footer>
+
 </html>

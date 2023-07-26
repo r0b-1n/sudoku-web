@@ -12,7 +12,7 @@ p {
 }
 
 h3 {
-    background-color: rgba(237, 62, 62, 1) ;
+    background-color: rgba(237, 62, 62, 1);
 }
 
 div[type="infobox"] {
@@ -23,7 +23,7 @@ div[type="infobox"] {
     display: inline-block;
     border-collapse: collapse;
 }
-  
+
 .row {
     display: flex;
 }
@@ -235,13 +235,13 @@ input[type="sudoku-right"] {
 input[type="text"]:focus {
     outline: none;
 }
-  
+
 input[type="text"]::-webkit-inner-spin-button,
 input[type="text"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-  
+
 input[type="text"]::-moz-inner-spin-button,
 input[type="text"]::-moz-outer-spin-button {
     -moz-appearance: none;
@@ -260,7 +260,7 @@ button {
     display: inline-block;
     background-color: #ED3E3E;
     color: white;
-    border-radius: 12px;  
+    border-radius: 12px;
 }
 
 select {
@@ -269,7 +269,7 @@ select {
     display: inline-block;
     background-color: #ED3E3E;
     color: white;
-    border-radius: 12px;  
+    border-radius: 12px;
 }
 
 option {
@@ -309,4 +309,3 @@ footer {
     position: absolute;
     bottom: 0;
 }
-  

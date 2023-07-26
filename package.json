@@ -1,7 +1,7 @@
 {
-  "name": "kreuzwortraetsel",
+  "name": "sudoku",
   "version": "1.0.0",
-  "description": "Ein Kreuzwortraetsel",
+  "description": "A simple website for sudoku",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

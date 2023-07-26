@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Sudoku online spielen - kostenlos</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="icon" type="image/x-icon" href="favicon.png">
+    <title>Sudoku online spielen - kostenlos</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
 </head>
 
 <body>
@@ -17,32 +18,29 @@
 
         <form>
             <p>Please select the game type:</p>
-            <input type="radio" id="time" name="game_type" value="Time">
-            <label for="time">Most points in time</label><br>
-            <input type="radio" id="completion" name="game_type" value="Completion">
-            <label for="completion">First Completion</label><br>
+            <input type="radio" id="time" name="game_type" value="Time">   <label for="time">Most points in time</label><br>   <input type="radio" id="completion" name="game_type" value="Completion">   <label for="completion">First Completion</label><br>
 
-          
-            <br>  
-          
+
+            <br>
+
             <p>Please select the sudoku for each player:</p>
             <input type="radio" id="type1" name="type" value="same">
             <label for="type">All the same</label><br>
             <input type="radio" id="type2" name="type" value="different">
-            <label for="type2">Different</label><br>  
+            <label for="type2">Different</label><br>
 
-            <br>  
-          
+            <br>
+
             <p>Please select the difficulty:</p>
             <input type="radio" id="easy" name="difficulty" value="easy">
             <label for="easy">Easy</label><br>
             <input type="radio" id="medium" name="difficulty" value="medium">
-            <label for="medium">Medium</label><br>  
+            <label for="medium">Medium</label><br>
             <input type="radio" id="hard" name="difficulty" value="hard">
             <label for="hard">Hard</label><br>
             <input type="radio" id="expert" name="difficulty" value="expert">
-            <label for="expert">Expert</label><br> 
-          </form><br>
+            <label for="expert">Expert</label><br>
+        </form><br>
 
         <button onclick="location.href='/game';">Create game</button>
     </section>
@@ -58,8 +56,9 @@
     <div>
         <a href="/datenschutz">Datenschutz</a><br>
         <a href="/impressum">Impressum</a><br>
-        <a href="/" >🇬🇧 English Version</a><br>
+        <a href="/">🇬🇧 English Version</a><br>
         <a href="https://github.com/r0b-1n/sudoku-web">Github</a><br>
     </div>
 </footer>
+
 </html>
