@@ -17,7 +17,7 @@ Can you solve the sudoku?
 
 <img src="https://sudoku.cyclic.app/sudoku.gif" alt="Sudoku"/>
 
-All you able to solve all of them?
+Are you able to solve all of them?
 
 ## Contribution
 
