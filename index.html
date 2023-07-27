@@ -20,7 +20,7 @@
             <h1>Sudokuverse</h1>
         </div>
     </section>
-    <button type="main-button" onclick="location.href='/play' ; "> <img src="favicon.png"> Start playing now</button><br>
+    <button type="main-button" onclick="location.href='/play' ; ">Start playing now</button><br>
     <div type="empty"></div>
     <section>
         <img type="display" src="sudoku.PNG">
@@ -41,8 +41,10 @@
             <p>- Jedes 3x3-Quadrat enthält eine der Ziffern 1 bis 9 mehr als einmal</p>
         </div>
         <img type="display" src="sudoku.gif"><br>
-        <button type="sudoku" onclick="location.href='/play' ; ">Sudoku erstellen und lösen</button>
-        <button type="sudoku" onclick="location.href='/print' ; ">Sudoku ausdrucken</button>
+        <div type="container">
+            <button type="sudoku" onclick="location.href='/play' ; ">Sudoku erstellen und lösen</button>
+            <button type="sudoku" onclick="location.href='/print' ; ">Sudoku ausdrucken</button>
+        </div>
     </section><br>
     <div type="empty"></div>
     <section>
@@ -54,7 +56,9 @@
                 Zeit wird sich Sudoku zu Ihrem beliebtesten Online-Spiel entwickeln. Sudoko, die beliebte japanische Denksportaufgabe, basiert auf der logischen Positionierung von Zahlen. Sudoku ist ein Online-Logikspiel, das weder Berechnungen noch spezielle
                 mathematische Kenntnisse erfordert; alles, was Sie benötigen, sind Köpfchen und Konzentration.</p>
         </div><br>
-        <button type="sudoku " onclick="location.href='/rooms' ; ">Sudoku gegeneinander spielen</button>
+        <div type="container">
+            <button type="sudoku " onclick="location.href='/rooms' ; ">Sudoku gegeneinander spielen</button>
+        </div>
     </section>
 </body>
 
@@ -64,11 +68,15 @@
     <div>
         Sudokuverse was made with ♥ | 2023 by Robin | Sudokuverse on
         <a href="https://github.com/r0b-1n/sudoku-web ">Github</a>
-    </div>
+    </div><br>
     <div type="links">
         <a href="/datenschutz ">Datenschutz</a>
         <a href="/impressum ">Impressum</a>
+    </div><br>
+    <div type="links">
         <a href="/ "><img src="english.png"></a>
+        <a href="/ "><img src="spanisch.png"></a>
+        <a href="/ "><img src="french.png"></a>
     </div>
 </footer>
 
