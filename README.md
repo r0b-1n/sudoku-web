@@ -19,6 +19,19 @@ Can you solve the sudoku?
 
 Are you able to solve all of them?
 
+## Special Thanks to:
+
+[Openmoji][openmoji]
+
+[tawn33y][tawn33y] for his [sudoku validator][valid]
+
+[ChatGPT][chatgpt] for helping me a lot with the sudoku creating code
+
+[openmoji]: https://openmoji.org/
+[valid]: https://gist.github.com/tawn33y/012de558c83d9e031dcfae52e11ef506
+[tawn33y]: https://github.com/tawn33y
+[chatgpt]: https://openai.com/chatgpt
+
 ## Contribution
 
 Feel free to open a pull request.

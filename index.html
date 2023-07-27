@@ -16,123 +16,59 @@
 
 <body>
     <section>
-        <div class="crossword">
-            <div class="row">
-                <input type="number-top-left" placeholder="5" maxlength="1">
-                <input type="number-top" placeholder="3" maxlength="1">
-                <input type="number-top-right" maxlength="1">
-                <input type="number-top" maxlength="1">
-                <input type="number-top" placeholder="7" maxlength="1">
-                <input type="number-top-right" maxlength="1">
-                <input type="number-top" maxlength="1">
-                <input type="number-top" maxlength="1">
-                <input type="number-top-right" maxlength="1">
-            </div>
-            <div class="row">
-                <input type="number-left" placeholder="6" maxlength="1">
-                <input type="number" maxlength="1">
-                <input type="number-right" maxlength="1">
-                <input type="number" placeholder="1" maxlength="1">
-                <input type="number" placeholder="9" maxlength="1">
-                <input type="number-right" placeholder="5" maxlength="1">
-                <input type="number" maxlength="1">
-                <input type="number" maxlength="1">
-                <input type="number-right" maxlength="1">
-            </div>
-            <div class="row">
-                <input type="number-bottom-left" maxlength="1">
-                <input type="number-bottom" placeholder="9" maxlength="1">
-                <input type="number-bottom-right" placeholder="8" maxlength="1">
-                <input type="number-bottom" maxlength="1">
-                <input type="number-bottom" maxlength="1">
-                <input type="number-bottom-right" maxlength="1">
-                <input type="number-bottom" maxlength="1">
-                <input type="number-bottom" placeholder="6" maxlength="1">
-                <input type="number-bottom-right" maxlength="1">
-            </div>
-            <div class="row">
-                <input type="number-left" placeholder="8" maxlength="1">
-                <input type="number" maxlength="1">
-                <input type="number-right" maxlength="1">
-                <input type="number" maxlength="1">
-                <input type="number" placeholder="6" maxlength="1">
-                <input type="number-right" maxlength="1">
-                <input type="number" maxlength="1">
-                <input type="number" maxlength="1">
-                <input type="number-right" placeholder="3" maxlength="1">
-            </div>
-            <div class="row">
-                <input type="number-left" placeholder="4" maxlength="1">
-                <input type="number" maxlength="1">
-                <input type="number-right" maxlength="1">
-                <input type="number" placeholder="8" maxlength="1">
-                <input type="number" maxlength="1">
-                <input type="number-right" placeholder="3" maxlength="1">
-                <input type="number" maxlength="1">
-                <input type="number" maxlength="1">
-                <input type="number-right" placeholder="1" maxlength="1">
-            </div>
-            <div class="row">
-                <input type="number-bottom-left" placeholder="7" maxlength="1">
-                <input type="number-bottom" maxlength="1">
-                <input type="number-bottom-right" maxlength="1">
-                <input type="number-bottom" maxlength="1">
-                <input type="number-bottom" placeholder="2" maxlength="1">
-                <input type="number-bottom-right" maxlength="1">
-                <input type="number-bottom" maxlength="1">
-                <input type="number-bottom" maxlength="1">
-                <input type="number-bottom-right" placeholder="6" maxlength="1">
-            </div>
-            <div class="row">
-                <input type="number-left" maxlength="1">
-                <input type="number" placeholder="6" maxlength="1">
-                <input type="number" maxlength="1">
-                <input type="number-left" maxlength="1">
-                <input type="number" maxlength="1">
-                <input type="number" maxlength="1">
-                <input type="number-left" placeholder="2" maxlength="1">
-                <input type="number" placeholder="8" maxlength="1">
-                <input type="number-right" maxlength="1">
-            </div>
-            <div class="row">
-                <input type="number-left" maxlength="1">
-                <input type="number" maxlength="1">
-                <input type="number-right" maxlength="1">
-                <input type="number" placeholder="4" maxlength="1">
-                <input type="number" placeholder="1" maxlength="1">
-                <input type="number-right" placeholder="9" maxlength="1">
-                <input type="number" maxlength="1">
-                <input type="number" maxlength="1">
-                <input type="number-right" placeholder="5" maxlength="1">
-            </div>
-            <div class="row">
-                <input type="number-bottom-left" maxlength="1">
-                <input type="number-bottom" maxlength="1">
-                <input type="number-bottom-right" maxlength="1">
-                <input type="number-bottom" maxlength="1">
-                <input type="number-bottom" placeholder="8" maxlength="1">
-                <input type="number-bottom-right" maxlength="1">
-                <input type="number-bottom" maxlength="1">
-                <input type="number-bottom" placeholder="7" maxlength="1">
-                <input type="number-bottom-right" placeholder="9" maxlength="1">
-            </div>
+        <div type="header">
+            <h1>Sudokuverse</h1>
         </div>
-    </section><br>
+    </section>
+    <button type="main-button" onclick="location.href='/play' ; "> <img src="favicon.png"> Start playing now</button><br>
+    <div type="empty"></div>
     <section>
-        <button type="sudoku" onclick="location.href='/play';">Sudoku erstellen und lösen</button>
-        <button type="sudoku" onclick="location.href='/rooms';">Sudoku gegeneinander spielen</button>
+        <img type="display" src="sudoku.PNG">
+        <div type="infobox">
+            <h3>What is Sudoku?</h3>
+            <p>Sudoku ist eines der beliebtesten Denksportaufgaben aller Zeiten. Das Ziel von Sudoku ist es, ein 9x9-Raster so mit Zahlen zu füllen, dass jede Reihe, Spalte und jedes 3x3-Quadrat alle Ziffern zwischen 1 und 9 enthält. Als Training des Gehirns
+                ist Sudoku ebenfalls hervorragend geeignet. Wenn Sie täglich Sudoku spielen, werden Sie bald sehen, wie sich Ihre Konzentration und Ihre gesamte geistige Leistungsfähigkeit verbessern. Fangen Sie noch heute an zu spielen. Innerhalb kürzester
+                Zeit wird sich Sudoku zu Ihrem beliebtesten Online-Spiel entwickeln. Sudoko, die beliebte japanische Denksportaufgabe, basiert auf der logischen Positionierung von Zahlen. Sudoku ist ein Online-Logikspiel, das weder Berechnungen noch spezielle
+                mathematische Kenntnisse erfordert; alles, was Sie benötigen, sind Köpfchen und Konzentration.</p>
+        </div><br>
+        <div type="empty"></div>
+        <div type="infobox">
+            <h3>How to play</h3>
+            <p>Das Ziel von Sudoku ist es, ein 9x9-Raster so mit Ziffern zu füllen, dass jede Spalte, Reihe und jedes 3x3-Quadrat die Zahlen zwischen 1 und 9 enthält. Zu Beginn des Spiels sind einige der Felder im 9x9-Raster ausgefüllt. Ihre Aufgabe ist
+                es, durch logisches Hin- und Herüberlegen die fehlenden Ziffern einzusetzen und so das Raster zu vervollständigen. Vergessen Sie nicht, in den folgenden Fällen ist eine Positionierung ungültig:</p>
+            <p>- Jede Reihe enthält eine der Ziffern 1 bis 9 mehr als einmal</p>
+            <p>- Jede Spalte enthält eine der Ziffern 1 bis 9 mehr als einmal</p>
+            <p>- Jedes 3x3-Quadrat enthält eine der Ziffern 1 bis 9 mehr als einmal</p>
+        </div>
+        <img type="display" src="sudoku.gif"><br>
+        <button type="sudoku" onclick="location.href='/play' ; ">Sudoku erstellen und lösen</button>
+        <button type="sudoku" onclick="location.href='/print' ; ">Sudoku ausdrucken</button>
     </section><br>
+    <div type="empty"></div>
     <section>
-        <button type="sudoku" onclick="location.href='/print';">Sudoku ausdrucken</button>
+        <img type="display" src="sudoku.PNG">
+        <div type="infobox">
+            <h3>Sudoku but Multiplayer?</h3>
+            <p>Sudoku ist eines der beliebtesten Denksportaufgaben aller Zeiten. Das Ziel von Sudoku ist es, ein 9x9-Raster so mit Zahlen zu füllen, dass jede Reihe, Spalte und jedes 3x3-Quadrat alle Ziffern zwischen 1 und 9 enthält. Als Training des Gehirns
+                ist Sudoku ebenfalls hervorragend geeignet. Wenn Sie täglich Sudoku spielen, werden Sie bald sehen, wie sich Ihre Konzentration und Ihre gesamte geistige Leistungsfähigkeit verbessern. Fangen Sie noch heute an zu spielen. Innerhalb kürzester
+                Zeit wird sich Sudoku zu Ihrem beliebtesten Online-Spiel entwickeln. Sudoko, die beliebte japanische Denksportaufgabe, basiert auf der logischen Positionierung von Zahlen. Sudoku ist ein Online-Logikspiel, das weder Berechnungen noch spezielle
+                mathematische Kenntnisse erfordert; alles, was Sie benötigen, sind Köpfchen und Konzentration.</p>
+        </div><br>
+        <button type="sudoku " onclick="location.href='/rooms' ; ">Sudoku gegeneinander spielen</button>
     </section>
 </body>
 
+<div type="empty"></div>
+
 <footer>
     <div>
-        <a href="/datenschutz">Datenschutz</a><br>
-        <a href="/impressum">Impressum</a><br>
-        <a href="/">🇬🇧 English Version</a><br>
-        <a href="https://github.com/r0b-1n/sudoku-web">Github</a><br>
+        Sudokuverse was made with ♥ | 2023 by Robin | Sudokuverse on
+        <a href="https://github.com/r0b-1n/sudoku-web ">Github</a>
+    </div>
+    <div type="links">
+        <a href="/datenschutz ">Datenschutz</a>
+        <a href="/impressum ">Impressum</a>
+        <a href="/ "><img src="english.png"></a>
     </div>
 </footer>
 
