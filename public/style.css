@@ -1,6 +1,9 @@
-body {
+body, html {
     display: grid;
     place-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 a {
@@ -38,7 +41,6 @@ div[type="logo"] {
 }
 
 div[type="header"] {
-    align-self: center;
     display: inline-block;
     align-items: center;
     /*background-image: url('https://sudoku.cyclic.app/sudoku.gif');*/
@@ -50,12 +52,20 @@ div[type="links"] {
 
 div[type="empty"] {
     width: 100%;
-    height: 5vw;
+    height: 6vw;
 }
 
 div[type="container"] {
     display: flex;
+    justify-content: center;
+  }
+
+
+div[type="content"] {
+    display: flex;
+    justify-content: center;
     align-items: center;
+    height: 100vh; /* Set a fixed height for the container */
   }
 
 .crossword {
@@ -359,3 +369,9 @@ footer {
     text-align: center;
     bottom: 0;
 }
+
+section {
+    width: 100%;
+    height: 100vh; /* This ensures the section takes the full viewport height */
+    scroll-snap-align: start; /* Snap to the start of each section */
+  }

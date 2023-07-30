@@ -9,45 +9,54 @@
     <meta content="Play Sudoku in your Browser" property="og:title" />
     <meta content="Slove your Sudokus alone or play against your friends in some cool modes!" property="og:description" />
     <meta content="https://sudoku.cyclic.app/" property="og:url" />
-    <meta content="https://sudoku.cyclic.app/favicon.png" property="og:image" />
-    <meta name="og:image" content="summary_large_image">
+    <meta content="https://sudoku.cyclic.app/favicon.png" property="og:image" content="summary_large_image"/>
     <meta content="#43B581" data-react-helmet="true" name="theme-color" />
 </head>
 
 <body>
     <section>
+        <div type="container">
         <div type="header">
             <h1>Sudokuverse</h1>
         </div>
-    </section>
-    <button type="main-button" onclick="location.href='/play' ; ">Start playing now</button><br>
-    <div type="empty"></div>
-    <section>
-        <img type="display" src="sudoku.PNG">
+        </div>
+        <div type="container">
+        <button type="main-button" onclick="location.href='/play' ; ">Start playing now</button>
+        </div>
+        <div type="empty"></div>
+        <div type="container">
+        <img type="display" src="sudoku.gif">
         <div type="infobox">
             <h3>What is Sudoku?</h3>
             <p>Sudoku ist eines der beliebtesten Denksportaufgaben aller Zeiten. Das Ziel von Sudoku ist es, ein 9x9-Raster so mit Zahlen zu füllen, dass jede Reihe, Spalte und jedes 3x3-Quadrat alle Ziffern zwischen 1 und 9 enthält. Als Training des Gehirns
                 ist Sudoku ebenfalls hervorragend geeignet. Wenn Sie täglich Sudoku spielen, werden Sie bald sehen, wie sich Ihre Konzentration und Ihre gesamte geistige Leistungsfähigkeit verbessern. Fangen Sie noch heute an zu spielen. Innerhalb kürzester
                 Zeit wird sich Sudoku zu Ihrem beliebtesten Online-Spiel entwickeln. Sudoko, die beliebte japanische Denksportaufgabe, basiert auf der logischen Positionierung von Zahlen. Sudoku ist ein Online-Logikspiel, das weder Berechnungen noch spezielle
                 mathematische Kenntnisse erfordert; alles, was Sie benötigen, sind Köpfchen und Konzentration.</p>
-        </div><br>
-        <div type="empty"></div>
-        <div type="infobox">
-            <h3>How to play</h3>
-            <p>Das Ziel von Sudoku ist es, ein 9x9-Raster so mit Ziffern zu füllen, dass jede Spalte, Reihe und jedes 3x3-Quadrat die Zahlen zwischen 1 und 9 enthält. Zu Beginn des Spiels sind einige der Felder im 9x9-Raster ausgefüllt. Ihre Aufgabe ist
-                es, durch logisches Hin- und Herüberlegen die fehlenden Ziffern einzusetzen und so das Raster zu vervollständigen. Vergessen Sie nicht, in den folgenden Fällen ist eine Positionierung ungültig:</p>
-            <p>- Jede Reihe enthält eine der Ziffern 1 bis 9 mehr als einmal</p>
-            <p>- Jede Spalte enthält eine der Ziffern 1 bis 9 mehr als einmal</p>
-            <p>- Jedes 3x3-Quadrat enthält eine der Ziffern 1 bis 9 mehr als einmal</p>
         </div>
-        <img type="display" src="sudoku.gif"><br>
-        <div type="container">
-            <button type="sudoku" onclick="location.href='/play' ; ">Sudoku erstellen und lösen</button>
-            <button type="sudoku" onclick="location.href='/print' ; ">Sudoku ausdrucken</button>
         </div>
-    </section><br>
-    <div type="empty"></div>
+    </section>
+
     <section>
+        <div type="empty"></div>
+            <div type="infobox">
+                <h3>How to play</h3>
+                <p>Das Ziel von Sudoku ist es, ein 9x9-Raster so mit Ziffern zu füllen, dass jede Spalte, Reihe und jedes 3x3-Quadrat die Zahlen zwischen 1 und 9 enthält. Zu Beginn des Spiels sind einige der Felder im 9x9-Raster ausgefüllt. Ihre Aufgabe ist
+                    es, durch logisches Hin- und Herüberlegen die fehlenden Ziffern einzusetzen und so das Raster zu vervollständigen. Vergessen Sie nicht, in den folgenden Fällen ist eine Positionierung ungültig:</p>
+                <p>- Jede Reihe enthält eine der Ziffern 1 bis 9 mehr als einmal</p>
+                <p>- Jede Spalte enthält eine der Ziffern 1 bis 9 mehr als einmal</p>
+                <p>- Jedes 3x3-Quadrat enthält eine der Ziffern 1 bis 9 mehr als einmal</p>
+            </div>
+            <img type="display" src="sudoku.png"><br>
+            <div type="empty"></div>
+            <div type="container">
+                <button type="sudoku" onclick="location.href='/play' ; ">Sudoku erstellen und lösen</button>
+                <button type="sudoku" onclick="location.href='/print' ; ">Sudoku ausdrucken</button>
+            </div>
+        <div type="empty"></div>
+    </section>
+
+    <section>
+        <div type="empty"></div>
         <img type="display" src="sudoku.PNG">
         <div type="infobox">
             <h3>Sudoku but Multiplayer?</h3>
@@ -56,28 +65,71 @@
                 Zeit wird sich Sudoku zu Ihrem beliebtesten Online-Spiel entwickeln. Sudoko, die beliebte japanische Denksportaufgabe, basiert auf der logischen Positionierung von Zahlen. Sudoku ist ein Online-Logikspiel, das weder Berechnungen noch spezielle
                 mathematische Kenntnisse erfordert; alles, was Sie benötigen, sind Köpfchen und Konzentration.</p>
         </div><br>
+        <div type="empty"></div>
         <div type="container">
             <button type="sudoku " onclick="location.href='/rooms' ; ">Sudoku gegeneinander spielen</button>
         </div>
+        <div type="empty"></div>
+
+        <footer>
+            <div>
+                Sudokuverse was made with ♥ | 2023 by Robin | Sudokuverse on
+                <a href="https://github.com/r0b-1n/sudoku-web ">Github</a>
+            </div><br>
+            <div type="links">
+                <a href="/datenschutz ">Datenschutz</a>
+                <a href="/impressum ">Impressum</a>
+            </div><br>
+            <div type="links">
+                <a href="/ "><img src="english.png"></a>
+                <a href="/ "><img src="spanisch.png"></a>
+                <a href="/ "><img src="french.png"></a>
+            </div>
+        </footer>
+
     </section>
+
 </body>
 
-<div type="empty"></div>
-
-<footer>
-    <div>
-        Sudokuverse was made with ♥ | 2023 by Robin | Sudokuverse on
-        <a href="https://github.com/r0b-1n/sudoku-web ">Github</a>
-    </div><br>
-    <div type="links">
-        <a href="/datenschutz ">Datenschutz</a>
-        <a href="/impressum ">Impressum</a>
-    </div><br>
-    <div type="links">
-        <a href="/ "><img src="english.png"></a>
-        <a href="/ "><img src="spanisch.png"></a>
-        <a href="/ "><img src="french.png"></a>
-    </div>
-</footer>
-
 </html>
+
+<script>
+
+// Get all the sections
+const sections = document.querySelectorAll('section');
+
+// Function to handle scroll snapping
+function snapToSection() {
+  const scrollPosition = window.scrollY;
+  const viewportHeight = window.innerHeight;
+
+  // Find the index of the section to snap to
+  let targetIndex = Math.round(scrollPosition / viewportHeight);
+
+  // Ensure the target index is within the valid range
+  targetIndex = Math.max(0, Math.min(targetIndex, sections.length - 1));
+
+  // Scroll the target section into view with the snapping effect
+  sections[targetIndex].scrollIntoView({ behavior: 'instant', block: 'center' });
+}
+
+// Debounce function to prevent excessive function calls
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      timeout = null;
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Listen for scroll events and trigger the snapping effect with debounce
+const debounceSnapToSection = debounce(snapToSection, 100);
+window.addEventListener('scroll', debounceSnapToSection);
+
+
+
+</script>
