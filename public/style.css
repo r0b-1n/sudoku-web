@@ -104,104 +104,11 @@ input[type="text"] {
     pointer-events: none;
 }
 
-input[type="number"] {
-    width: 4vw;
-    height: 4vw;
-    text-align: center;
-    border: 1px solid #ccc;
-    font-size: 20px;
-    pointer-events: none;
-}
-
-input[type="number-top"] {
-    width: 4vw;
-    height: 4vw;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-top: 5px solid #ccc;
-    font-size: 20px;
-    pointer-events: none;
-}
-
-input[type="number-top-left"] {
-    width: 4vw;
-    height: 4vw;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-top: 5px solid #ccc;
-    border-left: 5px solid #ccc;
-    font-size: 20px;
-    pointer-events: none;
-}
-
-input[type="number-top-right"] {
-    width: 4vw;
-    height: 4vw;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-top: 5px solid #ccc;
-    border-right: 5px solid #ccc;
-    font-size: 20px;
-    pointer-events: none;
-}
-
-input[type="number-bottom"] {
-    width: 4vw;
-    height: 4vw;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-bottom: 5px solid #ccc;
-    font-size: 20px;
-    pointer-events: none;
-}
-
-input[type="number-bottom-left"] {
-    width: 4vw;
-    height: 4vw;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-bottom: 5px solid #ccc;
-    border-left: 5px solid #ccc;
-    font-size: 20px;
-    pointer-events: none;
-}
-
-input[type="number-bottom-right"] {
-    width: 4vw;
-    height: 4vw;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-bottom: 5px solid #ccc;
-    border-right: 5px solid #ccc;
-    font-size: 20px;
-    pointer-events: none;
-}
-
-input[type="number-left"] {
-    width: 4vw;
-    height: 4vw;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-left: 5px solid #ccc;
-    font-size: 20px;
-    pointer-events: none;
-}
-
-input[type="number-right"] {
-    width: 4vw;
-    height: 4vw;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-right: 5px solid #ccc;
-    font-size: 20px;
-    pointer-events: none
-}
-
 input[type="sudoku"] {
     width: 5vw;
     height: 5vw;
     text-align: center;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     font-size: 2vw;
 }
 
@@ -209,8 +116,8 @@ input[type="sudoku-top"] {
     width: 5vw;
     height: 5vw;
     text-align: center;
-    border: 1px solid #ccc;
-    border-top: 5px solid #ccc;
+    border: 1px solid #000000;
+    border-top: 5px solid #000000;
     font-size: 2vw;
 }
 
@@ -218,9 +125,9 @@ input[type="sudoku-top-left"] {
     width: 5vw;
     height: 5vw;
     text-align: center;
-    border: 1px solid #ccc;
-    border-top: 5px solid #ccc;
-    border-left: 5px solid #ccc;
+    border: 1px solid #000000;
+    border-top: 5px solid #000000;
+    border-left: 5px solid #000000;
     font-size: 2vw;
 }
 
@@ -228,9 +135,9 @@ input[type="sudoku-top-right"] {
     width: 5vw;
     height: 5vw;
     text-align: center;
-    border: 1px solid #ccc;
-    border-top: 5px solid #ccc;
-    border-right: 5px solid #ccc;
+    border: 1px solid #000000;
+    border-top: 5px solid #000000;
+    border-right: 5px solid #000000;
     font-size: 2vw;
 }
 
@@ -238,8 +145,8 @@ input[type="sudoku-bottom"] {
     width: 5vw;
     height: 5vw;
     text-align: center;
-    border: 1px solid #ccc;
-    border-bottom: 5px solid #ccc;
+    border: 1px solid #000000;
+    border-bottom: 5px solid #000000;
     font-size: 2vw;
 }
 
@@ -247,9 +154,9 @@ input[type="sudoku-bottom-left"] {
     width: 5vw;
     height: 5vw;
     text-align: center;
-    border: 1px solid #ccc;
-    border-bottom: 5px solid #ccc;
-    border-left: 5px solid #ccc;
+    border: 1px solid #000000;
+    border-bottom: 5px solid #000000;
+    border-left: 5px solid #000000;
     font-size: 2vw;
 }
 
@@ -257,9 +164,9 @@ input[type="sudoku-bottom-right"] {
     width: 5vw;
     height: 5vw;
     text-align: center;
-    border: 1px solid #ccc;
-    border-bottom: 5px solid #ccc;
-    border-right: 5px solid #ccc;
+    border: 1px solid #000000;
+    border-bottom: 5px solid #000000;
+    border-right: 5px solid #000000;
     font-size: 2vw;
 }
 
@@ -267,8 +174,8 @@ input[type="sudoku-left"] {
     width: 5vw;
     height: 5vw;
     text-align: center;
-    border: 1px solid #ccc;
-    border-left: 5px solid #ccc;
+    border: 1px solid #000000;
+    border-left: 5px solid #000000;
     font-size: 2vw;
 }
 
@@ -276,8 +183,8 @@ input[type="sudoku-right"] {
     width: 5vw;
     height: 5vw;
     text-align: center;
-    border: 1px solid #ccc;
-    border-right: 5px solid #ccc;
+    border: 1px solid #000000;
+    border-right: 5px solid #000000;
     font-size: 2vw;
 }
 
